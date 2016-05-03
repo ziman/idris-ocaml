@@ -134,18 +134,25 @@ mangle n = "_idris_" ++ concatMap mangleChar (showCG n)
 codegenOCaml :: CodeGenerator
 codegenOCaml ci = writeFile (outputFile ci) (render "(* " " *)" source)
   where
-    source = ocamlPreamble $+$ definitions $+$ exports $+$ ocamlLauncher
+    source = ocamlPreamble $+$ definitions $+$ ocamlLauncher
 
     -- main file
     decls = liftDecls ci
     ctors = M.fromList [(n, tag) | (n, LConstructor n' tag arity) <- decls]
-    definitions = vcat $ map (cgDef ctors) [d | d@(_, LFun _ _ _) <- decls]
+    definitions = vcat $ map (cgDef ctors) [d | d@(_, LFun _ _ _ _) <- decls]
 
-    -- all exports
-    exports = vcat $ concatMap cgExport (exportDecls ci)
+-- Let's not mangle /that/ much. Especially function parameters
+-- like e0 and e1 are nicer when readable.
+cgName :: Name -> Expr
+cgName (MN i n) | all (\x -> isAlpha x || x `elem` "_") (T.unpack n)
+    = text $ T.unpack n ++ show i
+cgName n = text (mangle n)  -- <?> show n  -- uncomment this to get a comment for *every* mangled name
 
 cgDef :: M.Map Name Int -> (Name, LDecl) -> Doc
-cgDef ctors (n, DFun name' args body) = empty <?> show n
+cgDef ctors (n, LFun opts name' args body) = empty <?> show n
+
+cgApp :: Expr -> [Expr] -> Expr
+cgApp f args = parens (f <+> hsep args)
 
 {-
 cgExport :: ExportIFace -> [Doc]
@@ -172,13 +179,6 @@ cgExportFun fn en argCnt
     $+$ text ""
   where
     args = ["arg" ++ show i | i <- [1..argCnt]]
-
--- Let's not mangle /that/ much. Especially function parameters
--- like e0 and e1 are nicer when readable.
-cgName :: Name -> Expr
-cgName (MN i n) | all (\x -> isAlpha x || x `elem` "_") (T.unpack n)
-    = text $ T.unpack n ++ show i
-cgName n = text (mangle n)  -- <?> show n  -- uncomment this to get a comment for *every* mangled name
 
 bigParens :: Doc -> Doc
 bigParens d = lparen $+$ indent d $+$ rparen
