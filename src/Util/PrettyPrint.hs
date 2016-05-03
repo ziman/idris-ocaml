@@ -23,7 +23,7 @@ module Util.PrettyPrint
 type Line = (String, String)  -- text, comment
 newtype Doc = Doc [Line]
 instance Show Doc where
-    show = render "--"
+    show = render "(* " " *)"
 
 infixr 6 <>, <+>
 infixr 5 $$, $+$
@@ -87,14 +87,14 @@ parens d = lparen <> d <> rparen
 brackets :: Doc -> Doc
 brackets d = lbracket <> d <> rbracket
 
-render :: String -> Doc -> String
-render cmtStr (Doc xs) = unlines $ map (renderLine cmtStr) xs
+render :: String -> String -> Doc -> String
+render cmtL cmtR (Doc xs) = unlines $ map (renderLine cmtL cmtR) xs
 
-renderLine :: String -> (String, String) -> String
-renderLine cmtStr ("", "") = ""
-renderLine cmtStr ("", comment) = cmtStr ++ " " ++ comment
-renderLine cmtStr (content, "") = content
-renderLine cmtStr (content, comment) = content ++ "  " ++ cmtStr ++ " " ++ comment
+renderLine :: String -> String -> (String, String) -> String
+renderLine cmtL cmtR ("", "") = ""
+renderLine cmtL cmtR ("", comment) = cmtL ++ comment ++ cmtR
+renderLine cmtL cmtR (content, "") = content
+renderLine cmtL cmtR (content, comment) = content ++ "  " ++ cmtL ++ comment ++ cmtR
 
 empty :: Doc
 empty = Doc []
