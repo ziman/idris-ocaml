@@ -443,383 +443,336 @@ type value =
   | C_idris_Prelude_46_Uninhabited_46_Uninhabited_95_ictor
   ;;
 
+let rec __hello_world__ = "hello world!"
 (* Prelude.Bool.&& *)
-let _idris_Prelude_46_Bool_46__38__38_ e0 e1 =
+and _idris_Prelude_46_Bool_46__38__38_ e0 e1 =
   (match e0 with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_Bool_46_False
   | C_idris_Prelude_46_Bool_46_True ->
-    Lazy.force (e1));;
+    Lazy.force (e1))
 
 (* Prelude.List.++ *)
-let _idris_Prelude_46_List_46__43__43_ e0 e1 e2 =
+and _idris_Prelude_46_List_46__43__43_ e0 e1 e2 =
   (match e1 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (
-      C_idris_Prelude_46_List_46__58__58_
-        in0
-        (
-          _idris_Prelude_46_List_46__43__43_
-            (raise (Idris_error "LNothing"))
-            in1
-            e2
-        )
-    )
+    C_idris_Prelude_46_List_46__58__58_ (in0, (
+      _idris_Prelude_46_List_46__43__43_
+        (raise (Idris_error "LNothing"))
+        in1
+        e2
+    ))
   | C_idris_Prelude_46_List_46_Nil ->
-    e2);;
+    e2)
 
 (* Prelude.Basics.. *)
-let _idris_Prelude_46_Basics_46__46_ e0 e1 e2 e3 e4 _idris_x =
+and _idris_Prelude_46_Basics_46__46_ e0 e1 e2 e3 e4 _idris_x =
   (
     e3
       (
         e4
           _idris_x
       )
-  );;
+  )
 
 (* Prelude.Interfaces.< *)
-let _idris_Prelude_46_Interfaces_46__60_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__60_ e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
-    in1);;
+    in1)
 
 (* Prelude.Algebra.<+> *)
-let _idris_Prelude_46_Algebra_46__60__43__62_ e0 e1 =
-  e1;;
+and _idris_Prelude_46_Algebra_46__60__43__62_ e0 e1 =
+  e1
 
 (* Prelude.Interfaces.== *)
-let _idris_Prelude_46_Interfaces_46__61__61_ e0 e1 =
-  e1;;
+and _idris_Prelude_46_Interfaces_46__61__61_ e0 e1 =
+  e1
 
 (* Prelude.Interfaces.> *)
-let _idris_Prelude_46_Interfaces_46__62_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__62_ e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
-    in2);;
+    in2)
 
 (* Force *)
-let _idris_Force e0 e1 e2 =
+and _idris_Force e0 e1 e2 =
   let in0 = Lazy.force (e2) in
-    in0;;
+    in0
 
 (* PE_(a, b) implementation of Prelude.Show.Show_159bbfaf *)
-let _idris_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf =
-  (
-    C_idris_Prelude_46_Show_46_Show_95_ictor
-      _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_
-      _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_
-  );;
+and _idris_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf =
+  C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_)
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf26} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_ in13 =
-  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf25_125_;;
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_ in13 =
+  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf25_125_
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf25} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf25_125_ in14 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf25_125_ in14 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_
-      )
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_
-      )
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_)
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_)
       in14
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf24} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_ in19 =
-  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf23_125_;;
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_ in19 =
+  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf23_125_
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf23} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf23_125_ in20 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf23_125_ in20 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_
-      )
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_
-      )
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_)
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_)
       in20
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf22} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_ in25 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_ in25 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf21_125_
       in25
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf21} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf21_125_ in25 in26 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf21_125_ in25 in26 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in25
       in26
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf20} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_ in24 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_ in24 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in24
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf19} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_ in22 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_ in22 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf18_125_
       in22
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf18} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf18_125_ in22 in23 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf18_125_ in22 in23 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in22
       in23
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf17} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_ in21 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_ in21 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in21
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf16} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_ in18 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_ in18 =
   (
     _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec
       in18
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf15} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_ in16 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_ in16 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf14_125_
       in16
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf14} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf14_125_ in16 in17 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf14_125_ in16 in17 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in16
       in17
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf13} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_ in15 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_ in15 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in15
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf12} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_ in0 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_ in0 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_
-      )
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_
-      )
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_)
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_)
       in0
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf11} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_ in5 =
-  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf10_125_;;
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_ in5 =
+  _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf10_125_
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf10} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf10_125_ in6 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf10_125_ in6 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_
-      )
-      (
-        C_idris_Prelude_46_Show_46_Show_95_ictor
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_
-          _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_
-      )
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_)
+      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_)
       in6
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf9} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_ in11 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_ in11 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf8_125_
       in11
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf8} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf8_125_ in11 in12 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf8_125_ in11 in12 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in11
       in12
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf7} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_ in10 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_ in10 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in10
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf6} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_ in8 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_ in8 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf5_125_
       in8
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf5} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf5_125_ in8 in9 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf5_125_ in8 in9 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in8
       in9
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf4} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_ in7 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_ in7 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in7
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf3} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_ in4 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_ in4 =
   (
     _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec
       in4
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf2} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_ in2 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_ in2 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf1_125_
       in2
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf1} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf1_125_ in2 in3 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf1_125_ in2 in3 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in2
       in3
-  );;
+  )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf0} *)
-let _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_ in1 =
+and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_ in1 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       C_idris_Prelude_46_Show_46_Open
       in1
-  );;
+  )
 
 (* PE_@@constructor of Prelude.Algebra.Monoid#Semigroup ty_e557f19a *)
-let _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Algebra_46_Monoid_35_Semigroup_32_ty_95_e557f19a e0 meth0 meth1 =
+and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Algebra_46_Monoid_35_Semigroup_32_ty_95_e557f19a e0 meth0 meth1 =
   (
     _idris_Prelude_46_List_46__43__43_
       (raise (Idris_error "LNothing"))
       meth0
       meth1
-  );;
+  )
 
 (* PE_@@constructor of Prelude.Applicative.Alternative#Applicative f_ae124204 *)
-let _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Applicative_46_Alternative_35_Applicative_32_f_95_ae124204 meth0 meth1 =
-  (
-    C_idris_Prelude_46_List_46__58__58_
-      meth1
-      C_idris_Prelude_46_List_46_Nil
-  );;
+and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Applicative_46_Alternative_35_Applicative_32_f_95_ae124204 meth0 meth1 =
+  C_idris_Prelude_46_List_46__58__58_ (meth1, C_idris_Prelude_46_List_46_Nil)
 
 (* PE_@@constructor of Prelude.Monad.Monad#Applicative m_abd46658 *)
-let _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658 meth0 meth1 =
-  (
-    C_idris_Prelude_46_List_46__58__58_
-      meth1
-      C_idris_Prelude_46_List_46_Nil
-  );;
+and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658 meth0 meth1 =
+  C_idris_Prelude_46_List_46__58__58_ (meth1, C_idris_Prelude_46_List_46_Nil)
 
 (* PE_Prelude.Show.(a, b) implementation of Prelude.Show.Show, method show_8128b9ec *)
-let _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec e0 =
+and _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec e0 =
   (match e0 with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
-    (raise (Idris_error "unsupported op: LStrConcat")));;
+    (raise (Idris_error "unsupported op: LStrConcat")))
 
 (* PE_Prelude.Show.List a implementation of Prelude.Show.Show, method show_a9fea4bf *)
-let _idris_PE_95_Prelude_46_Show_46_List_32_a_32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_a9fea4bf e0 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_PE_95_Prelude_46_Show_46_List_32_a_32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_a9fea4bf e0 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* PE_concatMap_994c4fbe *)
-let _idris_PE_95_concatMap_95_994c4fbe e0 e1 e2 e3 =
+and _idris_PE_95_concatMap_95_994c4fbe e0 e1 e2 e3 =
   (
     _idris_PE_95_foldr_95_c8d7af37
       (raise (Idris_error "LNothing"))
@@ -833,10 +786,10 @@ let _idris_PE_95_concatMap_95_994c4fbe e0 e1 e2 e3 =
           (raise (Idris_error "LNothing"))
       )
       e3
-  );;
+  )
 
 (* {PE_concatMap_994c4fbe0} *)
-let _idris__123_PE_95_concatMap_95_994c4fbe0_125_ e2 in0 =
+and _idris__123_PE_95_concatMap_95_994c4fbe0_125_ e2 in0 =
   (
     _idris_Prelude_46_Algebra_46__60__43__62_
       (raise (Idris_error "LNothing"))
@@ -848,14 +801,14 @@ let _idris__123_PE_95_concatMap_95_994c4fbe0_125_ e2 in0 =
         e2
           in0
       )
-  );;
+  )
 
 (* PE_empty_4bb299b7 *)
-let _idris_PE_95_empty_95_4bb299b7 e0 =
-  C_idris_Prelude_46_List_46_Nil;;
+and _idris_PE_95_empty_95_4bb299b7 e0 =
+  C_idris_Prelude_46_List_46_Nil
 
 (* PE_foldr_c8d7af37 *)
-let _idris_PE_95_foldr_95_c8d7af37 e0 e1 e2 e3 e4 =
+and _idris_PE_95_foldr_95_c8d7af37 e0 e1 e2 e3 e4 =
   (
     _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0
       (raise (Idris_error "LNothing"))
@@ -863,14 +816,14 @@ let _idris_PE_95_foldr_95_c8d7af37 e0 e1 e2 e3 e4 =
       e2
       e3
       e4
-  );;
+  )
 
 (* PE_neutral_e557f19a *)
-let _idris_PE_95_neutral_95_e557f19a e0 =
-  C_idris_Prelude_46_List_46_Nil;;
+and _idris_PE_95_neutral_95_e557f19a e0 =
+  C_idris_Prelude_46_List_46_Nil
 
 (* PE_printLn'_1452bb16 *)
-let _idris_PE_95_printLn_39__95_1452bb16 e0 e1 =
+and _idris_PE_95_printLn_39__95_1452bb16 e0 e1 =
   (
     _idris_io_95_bind
       (raise (Idris_error "LNothing"))
@@ -881,23 +834,23 @@ let _idris_PE_95_printLn_39__95_1452bb16 e0 e1 =
           e1
       )
       _idris__123_PE_95_printLn_39__95_1452bb161_125_
-  );;
+  )
 
 (* {PE_printLn'_1452bb161} *)
-let _idris__123_PE_95_printLn_39__95_1452bb161_125_ in1 =
+and _idris__123_PE_95_printLn_39__95_1452bb161_125_ in1 =
   (
     _idris_io_95_return
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       C_idris_MkUnit
-  );;
+  )
 
 (* {PE_printLn'_1452bb160} *)
-let _idris__123_PE_95_printLn_39__95_1452bb160_125_ e1 in0 =
-  (raise (Idris_error "unsupported op: LWriteStr"));;
+and _idris__123_PE_95_printLn_39__95_1452bb160_125_ e1 in0 =
+  (raise (Idris_error "unsupported op: LWriteStr"))
 
 (* PE_printLn'_cfef5baf *)
-let _idris_PE_95_printLn_39__95_cfef5baf e0 e1 =
+and _idris_PE_95_printLn_39__95_cfef5baf e0 e1 =
   (
     _idris_io_95_bind
       (raise (Idris_error "LNothing"))
@@ -908,101 +861,101 @@ let _idris_PE_95_printLn_39__95_cfef5baf e0 e1 =
           e1
       )
       _idris__123_PE_95_printLn_39__95_cfef5baf1_125_
-  );;
+  )
 
 (* {PE_printLn'_cfef5baf1} *)
-let _idris__123_PE_95_printLn_39__95_cfef5baf1_125_ in1 =
+and _idris__123_PE_95_printLn_39__95_cfef5baf1_125_ in1 =
   (
     _idris_io_95_return
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       C_idris_MkUnit
-  );;
+  )
 
 (* {PE_printLn'_cfef5baf0} *)
-let _idris__123_PE_95_printLn_39__95_cfef5baf0_125_ e1 in0 =
-  (raise (Idris_error "unsupported op: LWriteStr"));;
+and _idris__123_PE_95_printLn_39__95_cfef5baf0_125_ e1 in0 =
+  (raise (Idris_error "unsupported op: LWriteStr"))
 
 (* PE_printLn_32c49909 *)
-let _idris_PE_95_printLn_95_32c49909 e0 =
+and _idris_PE_95_printLn_95_32c49909 e0 =
   (
     _idris_PE_95_printLn_39__95_1452bb16
       (raise (Idris_error "LNothing"))
       e0
-  );;
+  )
 
 (* PE_show_24967653 *)
-let _idris_PE_95_show_95_24967653 e0 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_PE_95_show_95_24967653 e0 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* {PE_show_249676532} *)
-let _idris__123_PE_95_show_95_249676532_125_ in1 =
-  _idris__123_PE_95_show_95_249676531_125_;;
+and _idris__123_PE_95_show_95_249676532_125_ in1 =
+  _idris__123_PE_95_show_95_249676531_125_
 
 (* {PE_show_249676531} *)
-let _idris__123_PE_95_show_95_249676531_125_ in2 =
+and _idris__123_PE_95_show_95_249676531_125_ in2 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0
       in2
-  );;
+  )
 
 (* {PE_show_249676530} *)
-let _idris__123_PE_95_show_95_249676530_125_ in0 =
+and _idris__123_PE_95_show_95_249676530_125_ in0 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0
       in0
-  );;
+  )
 
 (* PE_show_78b4bfbe *)
-let _idris_PE_95_show_95_78b4bfbe e0 =
+and _idris_PE_95_show_95_78b4bfbe e0 =
   (
     _idris_PE_95_Prelude_46_Show_46_List_32_a_32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_a9fea4bf
       e0
-  );;
+  )
 
 (* call__IO *)
-let _idris_call_95__95_IO e0 e1 e2 =
+and _idris_call_95__95_IO e0 e1 e2 =
   (
     e2
       (raise (Idris_error "LNothing"))
-  );;
+  )
 
 (* Prelude.Interfaces.compare *)
-let _idris_Prelude_46_Interfaces_46_compare e0 e1 =
+and _idris_Prelude_46_Interfaces_46_compare e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
-    in0);;
+    in0)
 
 (* Prelude.Foldable.foldr *)
-let _idris_Prelude_46_Foldable_46_foldr e0 e1 e2 e3 =
+and _idris_Prelude_46_Foldable_46_foldr e0 e1 e2 e3 =
   (
     e3
       e1
       e2
-  );;
+  )
 
 (* Prelude.Basics.id *)
-let _idris_Prelude_46_Basics_46_id e0 e1 =
-  e1;;
+and _idris_Prelude_46_Basics_46_id e0 e1 =
+  e1
 
 (* Prelude.Bool.ifThenElse *)
-let _idris_Prelude_46_Bool_46_ifThenElse e0 e1 e2 e3 =
+and _idris_Prelude_46_Bool_46_ifThenElse e0 e1 e2 e3 =
   (match e1 with
   | C_idris_Prelude_46_Bool_46_False ->
     Lazy.force (e3)
   | C_idris_Prelude_46_Bool_46_True ->
-    Lazy.force (e2));;
+    Lazy.force (e2))
 
 (* Prelude.Interfaces.intToBool *)
-let _idris_Prelude_46_Interfaces_46_intToBool e0 =
+and _idris_Prelude_46_Interfaces_46_intToBool e0 =
   (match e0 with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* io_bind *)
-let _idris_io_95_bind e0 e1 e2 e3 e4 _idris_w =
+and _idris_io_95_bind e0 e1 e2 e3 e4 _idris_w =
   (
     io_bind2
       e0
@@ -1015,10 +968,10 @@ let _idris_io_95_bind e0 e1 e2 e3 e4 _idris_w =
         e3
           _idris_w
       )
-  );;
+  )
 
 (* {io_bind2} *)
-let io_bind2 e0 e1 e2 e3 e4 _idris_w =
+and io_bind2 e0 e1 e2 e3 e4 _idris_w =
   (
     io_bind1
       e0
@@ -1027,10 +980,10 @@ let io_bind2 e0 e1 e2 e3 e4 _idris_w =
       e3
       e4
       _idris_w
-  );;
+  )
 
 (* {io_bind1} *)
-let io_bind1 e0 e1 e2 e3 e4 _idris_w in0 =
+and io_bind1 e0 e1 e2 e3 e4 _idris_w in0 =
   (
     io_bind0
       e0
@@ -1041,21 +994,21 @@ let io_bind1 e0 e1 e2 e3 e4 _idris_w in0 =
       _idris_w
       in0
       _idris_w
-  );;
+  )
 
 (* {io_bind0} *)
-let io_bind0 e0 e1 e2 e3 e4 _idris_w in0 =
+and io_bind0 e0 e1 e2 e3 e4 _idris_w in0 =
   (
     e4
       in0
-  );;
+  )
 
 (* io_return *)
-let _idris_io_95_return e0 e1 e2 _idris_w =
-  e2;;
+and _idris_io_95_return e0 e1 e2 _idris_w =
+  e2
 
 (* Prelude.Chars.isDigit *)
-let _idris_Prelude_46_Chars_46_isDigit e0 =
+and _idris_Prelude_46_Chars_46_isDigit e0 =
   (match (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__61__58_0
       e0
@@ -1067,18 +1020,18 @@ let _idris_Prelude_46_Chars_46_isDigit e0 =
     Lazy.force ((
       _idris_Prelude_46_Chars_46__123_isDigit0_125_
         e0
-    )));;
+    )))
 
 (* Prelude.Chars.{isDigit0} *)
-let _idris_Prelude_46_Chars_46__123_isDigit0_125_ e0 =
+and _idris_Prelude_46_Chars_46__123_isDigit0_125_ e0 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__61__58_0
       e0
       '9'
-  );;
+  )
 
 (* Main.main *)
-let _idris_Main_46_main =
+and _idris_Main_46_main =
   (
     _idris_io_95_bind
       (raise (Idris_error "LNothing"))
@@ -1092,10 +1045,10 @@ let _idris_Main_46_main =
           )
       )
       _idris_Main_46__123_main2_125_
-  );;
+  )
 
 (* Main.{main2} *)
-let _idris_Main_46__123_main2_125_ in0 =
+and _idris_Main_46__123_main2_125_ in0 =
   (
     _idris_PE_95_printLn_39__95_cfef5baf
       (raise (Idris_error "LNothing"))
@@ -1103,39 +1056,27 @@ let _idris_Main_46__123_main2_125_ in0 =
         _idris_Prelude_46_List_46_sortBy
           (raise (Idris_error "LNothing"))
           _idris_Main_46__123_main1_125_
-          (
-            C_idris_Prelude_46_List_46__58__58_
-              "foo"
-              (
-                C_idris_Prelude_46_List_46__58__58_
-                  "bar"
-                  (
-                    C_idris_Prelude_46_List_46__58__58_
-                      "baz"
-                      C_idris_Prelude_46_List_46_Nil
-                  )
-              )
-          )
+          C_idris_Prelude_46_List_46__58__58_ ("foo", C_idris_Prelude_46_List_46__58__58_ ("bar", C_idris_Prelude_46_List_46__58__58_ ("baz", C_idris_Prelude_46_List_46_Nil)))
       )
-  );;
+  )
 
 (* Main.{main1} *)
-let _idris_Main_46__123_main1_125_ in1 =
+and _idris_Main_46__123_main1_125_ in1 =
   (
     _idris_Main_46__123_main0_125_
       in1
-  );;
+  )
 
 (* Main.{main0} *)
-let _idris_Main_46__123_main0_125_ in1 in2 =
+and _idris_Main_46__123_main0_125_ in1 in2 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_String_58__33_compare_58_0
       in1
       in2
-  );;
+  )
 
 (* Prelude.List.mergeBy *)
-let _idris_Prelude_46_List_46_mergeBy e0 e1 e2 e3 =
+and _idris_Prelude_46_List_46_mergeBy e0 e1 e2 e3 =
   (match e2 with
   | C_idris_Prelude_46_List_46_Nil ->
     e3
@@ -1154,54 +1095,38 @@ let _idris_Prelude_46_List_46_mergeBy e0 e1 e2 e3 =
             C_idris_Prelude_46_Interfaces_46_LT
         ) with
         | C_idris_Prelude_46_Bool_46_False ->
-          (
-            C_idris_Prelude_46_List_46__58__58_
-              in0
-              (
-                _idris_Prelude_46_List_46_mergeBy
-                  (raise (Idris_error "LNothing"))
-                  e1
-                  (
-                    C_idris_Prelude_46_List_46__58__58_
-                      in2
-                      in3
-                  )
-                  in1
-              )
-          )
+          C_idris_Prelude_46_List_46__58__58_ (in0, (
+            _idris_Prelude_46_List_46_mergeBy
+              (raise (Idris_error "LNothing"))
+              e1
+              C_idris_Prelude_46_List_46__58__58_ (in2, in3)
+              in1
+          ))
         | C_idris_Prelude_46_Bool_46_True ->
-          (
-            C_idris_Prelude_46_List_46__58__58_
-              in2
-              (
-                _idris_Prelude_46_List_46_mergeBy
-                  (raise (Idris_error "LNothing"))
-                  e1
-                  in3
-                  (
-                    C_idris_Prelude_46_List_46__58__58_
-                      in0
-                      in1
-                  )
-              )
-          )))
+          C_idris_Prelude_46_List_46__58__58_ (in2, (
+            _idris_Prelude_46_List_46_mergeBy
+              (raise (Idris_error "LNothing"))
+              e1
+              in3
+              C_idris_Prelude_46_List_46__58__58_ (in0, in1)
+          ))))
     | C_idris_Prelude_46_List_46_Nil ->
-      e2));;
+      e2))
 
 (* mkForeignPrim *)
-let _idris_mkForeignPrim =
-  (raise (Idris_error "LNothing"));;
+and _idris_mkForeignPrim =
+  (raise (Idris_error "LNothing"))
 
 (* Prelude.Bool.not *)
-let _idris_Prelude_46_Bool_46_not e0 =
+and _idris_Prelude_46_Bool_46_not e0 =
   (match e0 with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_Bool_46_True
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Show.precCon *)
-let _idris_Prelude_46_Show_46_precCon e0 =
+and _idris_Prelude_46_Show_46_precCon e0 =
   (match e0 with
   | C_idris_Prelude_46_Show_46_App ->
     6
@@ -1216,10 +1141,10 @@ let _idris_Prelude_46_Show_46_precCon e0 =
   | C_idris_Prelude_46_Show_46_PrefixMinus ->
     5
   | C_idris_Prelude_46_Show_46_User (in0) ->
-    4);;
+    4)
 
 (* Prelude.Show.primNumShow *)
-let _idris_Prelude_46_Show_46_primNumShow e0 e1 e2 e3 =
+and _idris_Prelude_46_Show_46_primNumShow e0 e1 e2 e3 =
   let in0 = (
     e1
       e3
@@ -1243,10 +1168,10 @@ let _idris_Prelude_46_Show_46_primNumShow e0 e1 e2 e3 =
     | C_idris_Prelude_46_Bool_46_False ->
       in0
     | C_idris_Prelude_46_Bool_46_True ->
-      (raise (Idris_error "unsupported op: LStrConcat")));;
+      (raise (Idris_error "unsupported op: LStrConcat")))
 
 (* Prelude.Show.{primNumShow2} *)
-let _idris_Prelude_46_Show_46__123_primNumShow2_125_ in0 e0 e1 e2 e3 =
+and _idris_Prelude_46_Show_46__123_primNumShow2_125_ in0 e0 e1 e2 e3 =
   (match (
     _idris_Prelude_46_Strings_46_strM
       in0
@@ -1264,204 +1189,204 @@ let _idris_Prelude_46_Show_46__123_primNumShow2_125_ in0 e0 e1 e2 e3 =
         in2
     )
   | C_idris_Prelude_46_Strings_46_StrNil ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Show.{primNumShow1} *)
-let _idris_Prelude_46_Show_46__123_primNumShow1_125_ e0 e1 e2 e3 in0 in2 in3 =
-  _idris_Prelude_46_Show_46__123_primNumShow0_125_;;
+and _idris_Prelude_46_Show_46__123_primNumShow1_125_ e0 e1 e2 e3 in0 in2 in3 =
+  _idris_Prelude_46_Show_46__123_primNumShow0_125_
 
 (* Prelude.Show.{primNumShow0} *)
-let _idris_Prelude_46_Show_46__123_primNumShow0_125_ in1 =
+and _idris_Prelude_46_Show_46__123_primNumShow0_125_ in1 =
   (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* prim__addInt *)
-let _idris_prim_95__95_addInt op0 op1 =
-  (raise (Idris_error "unsupported op: LPlus (ATInt ITNative)"));;
+and _idris_prim_95__95_addInt op0 op1 =
+  (raise (Idris_error "unsupported op: LPlus (ATInt ITNative)"))
 
 (* prim__asPtr *)
-let _idris_prim_95__95_asPtr op0 =
-  (raise (Idris_error "unsupported op: LExternal prim__asPtr"));;
+and _idris_prim_95__95_asPtr op0 =
+  (raise (Idris_error "unsupported op: LExternal prim__asPtr"))
 
 (* prim__charToInt *)
-let _idris_prim_95__95_charToInt op0 =
-  (raise (Idris_error "unsupported op: LChInt ITNative"));;
+and _idris_prim_95__95_charToInt op0 =
+  (raise (Idris_error "unsupported op: LChInt ITNative"))
 
 (* prim__concat *)
-let _idris_prim_95__95_concat op0 op1 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_prim_95__95_concat op0 op1 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* prim__eqBigInt *)
-let _idris_prim_95__95_eqBigInt op0 op1 =
-  (raise (Idris_error "unsupported op: LEq (ATInt ITBig)"));;
+and _idris_prim_95__95_eqBigInt op0 op1 =
+  (raise (Idris_error "unsupported op: LEq (ATInt ITBig)"))
 
 (* prim__eqChar *)
-let _idris_prim_95__95_eqChar op0 op1 =
-  (raise (Idris_error "unsupported op: LEq (ATInt ITChar)"));;
+and _idris_prim_95__95_eqChar op0 op1 =
+  (raise (Idris_error "unsupported op: LEq (ATInt ITChar)"))
 
 (* prim__eqInt *)
-let _idris_prim_95__95_eqInt op0 op1 =
-  (raise (Idris_error "unsupported op: LEq (ATInt ITNative)"));;
+and _idris_prim_95__95_eqInt op0 op1 =
+  (raise (Idris_error "unsupported op: LEq (ATInt ITNative)"))
 
 (* prim__eqManagedPtr *)
-let _idris_prim_95__95_eqManagedPtr op0 op1 =
-  (raise (Idris_error "unsupported op: LExternal prim__eqManagedPtr"));;
+and _idris_prim_95__95_eqManagedPtr op0 op1 =
+  (raise (Idris_error "unsupported op: LExternal prim__eqManagedPtr"))
 
 (* prim__eqPtr *)
-let _idris_prim_95__95_eqPtr op0 op1 =
-  (raise (Idris_error "unsupported op: LExternal prim__eqPtr"));;
+and _idris_prim_95__95_eqPtr op0 op1 =
+  (raise (Idris_error "unsupported op: LExternal prim__eqPtr"))
 
 (* prim__eqString *)
-let _idris_prim_95__95_eqString op0 op1 =
-  (raise (Idris_error "unsupported op: LStrEq"));;
+and _idris_prim_95__95_eqString op0 op1 =
+  (raise (Idris_error "unsupported op: LStrEq"))
 
 (* prim__ltString *)
-let _idris_prim_95__95_ltString op0 op1 =
-  (raise (Idris_error "unsupported op: LStrLt"));;
+and _idris_prim_95__95_ltString op0 op1 =
+  (raise (Idris_error "unsupported op: LStrLt"))
 
 (* prim__mulInt *)
-let _idris_prim_95__95_mulInt op0 op1 =
-  (raise (Idris_error "unsupported op: LTimes (ATInt ITNative)"));;
+and _idris_prim_95__95_mulInt op0 op1 =
+  (raise (Idris_error "unsupported op: LTimes (ATInt ITNative)"))
 
 (* prim__null *)
-let _idris_prim_95__95_null =
-  (raise (Idris_error "unsupported op: LExternal prim__null"));;
+and _idris_prim_95__95_null =
+  (raise (Idris_error "unsupported op: LExternal prim__null"))
 
 (* prim__peek16 *)
-let _idris_prim_95__95_peek16 op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__peek16"));;
+and _idris_prim_95__95_peek16 op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__peek16"))
 
 (* prim__peek32 *)
-let _idris_prim_95__95_peek32 op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__peek32"));;
+and _idris_prim_95__95_peek32 op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__peek32"))
 
 (* prim__peek64 *)
-let _idris_prim_95__95_peek64 op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__peek64"));;
+and _idris_prim_95__95_peek64 op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__peek64"))
 
 (* prim__peek8 *)
-let _idris_prim_95__95_peek8 op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__peek8"));;
+and _idris_prim_95__95_peek8 op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__peek8"))
 
 (* prim__peekPtr *)
-let _idris_prim_95__95_peekPtr op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__peekPtr"));;
+and _idris_prim_95__95_peekPtr op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__peekPtr"))
 
 (* prim__poke16 *)
-let _idris_prim_95__95_poke16 op0 op1 op2 op3 =
-  (raise (Idris_error "unsupported op: LExternal prim__poke16"));;
+and _idris_prim_95__95_poke16 op0 op1 op2 op3 =
+  (raise (Idris_error "unsupported op: LExternal prim__poke16"))
 
 (* prim__poke32 *)
-let _idris_prim_95__95_poke32 op0 op1 op2 op3 =
-  (raise (Idris_error "unsupported op: LExternal prim__poke32"));;
+and _idris_prim_95__95_poke32 op0 op1 op2 op3 =
+  (raise (Idris_error "unsupported op: LExternal prim__poke32"))
 
 (* prim__poke64 *)
-let _idris_prim_95__95_poke64 op0 op1 op2 op3 =
-  (raise (Idris_error "unsupported op: LExternal prim__poke64"));;
+and _idris_prim_95__95_poke64 op0 op1 op2 op3 =
+  (raise (Idris_error "unsupported op: LExternal prim__poke64"))
 
 (* prim__poke8 *)
-let _idris_prim_95__95_poke8 op0 op1 op2 op3 =
-  (raise (Idris_error "unsupported op: LExternal prim__poke8"));;
+and _idris_prim_95__95_poke8 op0 op1 op2 op3 =
+  (raise (Idris_error "unsupported op: LExternal prim__poke8"))
 
 (* prim__pokePtr *)
-let _idris_prim_95__95_pokePtr op0 op1 op2 op3 =
-  (raise (Idris_error "unsupported op: LExternal prim__pokePtr"));;
+and _idris_prim_95__95_pokePtr op0 op1 op2 op3 =
+  (raise (Idris_error "unsupported op: LExternal prim__pokePtr"))
 
 (* prim__readFile *)
-let _idris_prim_95__95_readFile op0 op1 =
-  (raise (Idris_error "unsupported op: LExternal prim__readFile"));;
+and _idris_prim_95__95_readFile op0 op1 =
+  (raise (Idris_error "unsupported op: LExternal prim__readFile"))
 
 (* prim__registerPtr *)
-let _idris_prim_95__95_registerPtr op0 op1 =
-  (raise (Idris_error "unsupported op: LExternal prim__registerPtr"));;
+and _idris_prim_95__95_registerPtr op0 op1 =
+  (raise (Idris_error "unsupported op: LExternal prim__registerPtr"))
 
 (* prim__sextInt_BigInt *)
-let _idris_prim_95__95_sextInt_95_BigInt op0 =
-  (raise (Idris_error "unsupported op: LSExt ITNative ITBig"));;
+and _idris_prim_95__95_sextInt_95_BigInt op0 =
+  (raise (Idris_error "unsupported op: LSExt ITNative ITBig"))
 
 (* prim__sizeofPtr *)
-let _idris_prim_95__95_sizeofPtr =
-  (raise (Idris_error "unsupported op: LExternal prim__sizeofPtr"));;
+and _idris_prim_95__95_sizeofPtr =
+  (raise (Idris_error "unsupported op: LExternal prim__sizeofPtr"))
 
 (* prim__sltBigInt *)
-let _idris_prim_95__95_sltBigInt op0 op1 =
-  (raise (Idris_error "unsupported op: LSLt (ATInt ITBig)"));;
+and _idris_prim_95__95_sltBigInt op0 op1 =
+  (raise (Idris_error "unsupported op: LSLt (ATInt ITBig)"))
 
 (* prim__sltChar *)
-let _idris_prim_95__95_sltChar op0 op1 =
-  (raise (Idris_error "unsupported op: LSLt (ATInt ITChar)"));;
+and _idris_prim_95__95_sltChar op0 op1 =
+  (raise (Idris_error "unsupported op: LSLt (ATInt ITChar)"))
 
 (* prim__sltInt *)
-let _idris_prim_95__95_sltInt op0 op1 =
-  (raise (Idris_error "unsupported op: LSLt (ATInt ITNative)"));;
+and _idris_prim_95__95_sltInt op0 op1 =
+  (raise (Idris_error "unsupported op: LSLt (ATInt ITNative)"))
 
 (* prim__stderr *)
-let _idris_prim_95__95_stderr =
-  (raise (Idris_error "unsupported op: LExternal prim__stderr"));;
+and _idris_prim_95__95_stderr =
+  (raise (Idris_error "unsupported op: LExternal prim__stderr"))
 
 (* prim__stdin *)
-let _idris_prim_95__95_stdin =
-  (raise (Idris_error "unsupported op: LExternal prim__stdin"));;
+and _idris_prim_95__95_stdin =
+  (raise (Idris_error "unsupported op: LExternal prim__stdin"))
 
 (* prim__stdout *)
-let _idris_prim_95__95_stdout =
-  (raise (Idris_error "unsupported op: LExternal prim__stdout"));;
+and _idris_prim_95__95_stdout =
+  (raise (Idris_error "unsupported op: LExternal prim__stdout"))
 
 (* prim__strCons *)
-let _idris_prim_95__95_strCons op0 op1 =
-  (raise (Idris_error "unsupported op: LStrCons"));;
+and _idris_prim_95__95_strCons op0 op1 =
+  (raise (Idris_error "unsupported op: LStrCons"))
 
 (* prim__strHead *)
-let _idris_prim_95__95_strHead op0 =
-  (raise (Idris_error "unsupported op: LStrHead"));;
+and _idris_prim_95__95_strHead op0 =
+  (raise (Idris_error "unsupported op: LStrHead"))
 
 (* prim__strTail *)
-let _idris_prim_95__95_strTail op0 =
-  (raise (Idris_error "unsupported op: LStrTail"));;
+and _idris_prim_95__95_strTail op0 =
+  (raise (Idris_error "unsupported op: LStrTail"))
 
 (* prim__subInt *)
-let _idris_prim_95__95_subInt op0 op1 =
-  (raise (Idris_error "unsupported op: LMinus (ATInt ITNative)"));;
+and _idris_prim_95__95_subInt op0 op1 =
+  (raise (Idris_error "unsupported op: LMinus (ATInt ITNative)"))
 
 (* prim__toStrInt *)
-let _idris_prim_95__95_toStrInt op0 =
-  (raise (Idris_error "unsupported op: LIntStr ITNative"));;
+and _idris_prim_95__95_toStrInt op0 =
+  (raise (Idris_error "unsupported op: LIntStr ITNative"))
 
 (* prim__vm *)
-let _idris_prim_95__95_vm =
-  (raise (Idris_error "unsupported op: LExternal prim__vm"));;
+and _idris_prim_95__95_vm =
+  (raise (Idris_error "unsupported op: LExternal prim__vm"))
 
 (* prim__writeFile *)
-let _idris_prim_95__95_writeFile op0 op1 op2 =
-  (raise (Idris_error "unsupported op: LExternal prim__writeFile"));;
+and _idris_prim_95__95_writeFile op0 op1 op2 =
+  (raise (Idris_error "unsupported op: LExternal prim__writeFile"))
 
 (* prim__writeString *)
-let _idris_prim_95__95_writeString op0 op1 =
-  (raise (Idris_error "unsupported op: LWriteStr"));;
+and _idris_prim_95__95_writeString op0 op1 =
+  (raise (Idris_error "unsupported op: LWriteStr"))
 
 (* prim_io_bind *)
-let _idris_prim_95_io_95_bind e0 e1 e2 e3 =
+and _idris_prim_95_io_95_bind e0 e1 e2 e3 =
   (
     e3
       e2
-  );;
+  )
 
 (* Prelude.Show.protectEsc *)
-let _idris_Prelude_46_Show_46_protectEsc e0 e1 e2 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46_protectEsc e0 e1 e2 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Applicative.pure *)
-let _idris_Prelude_46_Applicative_46_pure e0 e1 e2 =
+and _idris_Prelude_46_Applicative_46_pure e0 e1 e2 =
   (
     e2
       e1
-  );;
+  )
 
 (* Main.pythag *)
-let _idris_Main_46_pythag e0 =
+and _idris_Main_46_pythag e0 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
       (raise (Idris_error "LNothing"))
@@ -1472,10 +1397,10 @@ let _idris_Main_46_pythag e0 =
           e0
       )
       _idris_Main_46__123_pythag3_125_
-  );;
+  )
 
 (* Main.{pythag3} *)
-let _idris_Main_46__123_pythag3_125_ in0 =
+and _idris_Main_46__123_pythag3_125_ in0 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
       (raise (Idris_error "LNothing"))
@@ -1489,10 +1414,10 @@ let _idris_Main_46__123_pythag3_125_ in0 =
         _idris_Main_46__123_pythag2_125_
           in0
       )
-  );;
+  )
 
 (* Main.{pythag2} *)
-let _idris_Main_46__123_pythag2_125_ in0 in1 =
+and _idris_Main_46__123_pythag2_125_ in0 in1 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
       (raise (Idris_error "LNothing"))
@@ -1507,10 +1432,10 @@ let _idris_Main_46__123_pythag2_125_ in0 in1 =
           in1
           in0
       )
-  );;
+  )
 
 (* Main.{pythag1} *)
-let _idris_Main_46__123_pythag1_125_ in1 in0 in2 =
+and _idris_Main_46__123_pythag1_125_ in1 in0 in2 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
       (raise (Idris_error "LNothing"))
@@ -1539,45 +1464,37 @@ let _idris_Main_46__123_pythag1_125_ in1 in0 in2 =
           in1
           in0
       )
-  );;
+  )
 
 (* Main.{pythag0} *)
-let _idris_Main_46__123_pythag0_125_ in2 in1 in0 in3 =
+and _idris_Main_46__123_pythag0_125_ in2 in1 in0 in3 =
   (
     _idris_Prelude_46_Applicative_46_pure
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658
-      (
-        C_idris_Builtins_46_MkPair
-          in2
-          (
-            C_idris_Builtins_46_MkPair
-              in1
-              in0
-          )
-      )
-  );;
+      C_idris_Builtins_46_MkPair (in2, C_idris_Builtins_46_MkPair (in1, in0))
+  )
 
 (* really_believe_me *)
-let _idris_really_95_believe_95_me e0 e1 e2 =
-  e2;;
+and _idris_really_95_believe_95_me e0 e1 e2 =
+  e2
 
 (* run__IO *)
-let _idris_run_95__95_IO e0 e1 =
+and _idris_run_95__95_IO e0 e1 =
   (
     e1
       (raise (Idris_error "LNothing"))
-  );;
+  )
 
 (* Prelude.Show.show *)
-let _idris_Prelude_46_Show_46_show e0 e1 =
+and _idris_Prelude_46_Show_46_show e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Show_46_Show_95_ictor (in0, in1) ->
-    in0);;
+    in0)
 
 (* Prelude.Show.showLitChar *)
-let _idris_Prelude_46_Show_46_showLitChar e0 =
+and _idris_Prelude_46_Show_46_showLitChar e0 =
   (match e0 with
   | '\x07' ->
     _idris_Prelude_46_Show_46__123_showLitChar0_125_
@@ -1664,58 +1581,58 @@ let _idris_Prelude_46_Show_46_showLitChar e0 =
                     (raise (Idris_error "unsupported op: LChInt ITNative"))
                 )
             )
-        ))));;
+        ))))
 
 (* Prelude.Show.{showLitChar10} *)
-let _idris_Prelude_46_Show_46__123_showLitChar10_125_ in10 in11 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar10_125_ in10 in11 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar9} *)
-let _idris_Prelude_46_Show_46__123_showLitChar9_125_ in9 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar9_125_ in9 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar8} *)
-let _idris_Prelude_46_Show_46__123_showLitChar8_125_ in8 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar8_125_ in8 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar7} *)
-let _idris_Prelude_46_Show_46__123_showLitChar7_125_ in7 =
+and _idris_Prelude_46_Show_46__123_showLitChar7_125_ in7 =
   (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Show.{showLitChar6} *)
-let _idris_Prelude_46_Show_46__123_showLitChar6_125_ in6 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar6_125_ in6 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar5} *)
-let _idris_Prelude_46_Show_46__123_showLitChar5_125_ in5 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar5_125_ in5 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar4} *)
-let _idris_Prelude_46_Show_46__123_showLitChar4_125_ in4 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar4_125_ in4 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar3} *)
-let _idris_Prelude_46_Show_46__123_showLitChar3_125_ in3 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar3_125_ in3 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar2} *)
-let _idris_Prelude_46_Show_46__123_showLitChar2_125_ in2 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar2_125_ in2 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar1} *)
-let _idris_Prelude_46_Show_46__123_showLitChar1_125_ in1 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar1_125_ in1 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.{showLitChar0} *)
-let _idris_Prelude_46_Show_46__123_showLitChar0_125_ in0 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitChar0_125_ in0 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.showLitString *)
-let _idris_Prelude_46_Show_46_showLitString e0 =
+and _idris_Prelude_46_Show_46_showLitString e0 =
   (match e0 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (match in0 with
@@ -1750,37 +1667,33 @@ let _idris_Prelude_46_Show_46_showLitString e0 =
     (
       _idris_Prelude_46_Basics_46_id
         (raise (Idris_error "LNothing"))
-    ));;
+    ))
 
 (* Prelude.Show.{showLitString0} *)
-let _idris_Prelude_46_Show_46__123_showLitString0_125_ in2 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_showLitString0_125_ in2 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* Prelude.Show.showParens *)
-let _idris_Prelude_46_Show_46_showParens e0 e1 =
+and _idris_Prelude_46_Show_46_showParens e0 e1 =
   (match e0 with
   | C_idris_Prelude_46_Bool_46_False ->
     e1
   | C_idris_Prelude_46_Bool_46_True ->
-    (raise (Idris_error "unsupported op: LStrConcat")));;
+    (raise (Idris_error "unsupported op: LStrConcat")))
 
 (* Prelude.Show.showPrec *)
-let _idris_Prelude_46_Show_46_showPrec e0 e1 =
+and _idris_Prelude_46_Show_46_showPrec e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Show_46_Show_95_ictor (in0, in1) ->
-    in1);;
+    in1)
 
 (* Prelude.List.sortBy *)
-let _idris_Prelude_46_List_46_sortBy e0 e1 e2 =
+and _idris_Prelude_46_List_46_sortBy e0 e1 e2 =
   (match e2 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (match in1 with
     | C_idris_Prelude_46_List_46_Nil ->
-      (
-        C_idris_Prelude_46_List_46__58__58_
-          in0
-          C_idris_Prelude_46_List_46_Nil
-      )
+      C_idris_Prelude_46_List_46__58__58_ (in0, C_idris_Prelude_46_List_46_Nil)
     | _ ->
       (match (
         _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2
@@ -1844,10 +1757,10 @@ let _idris_Prelude_46_List_46_sortBy e0 e1 e2 =
               e1
               in5
           )
-      )));;
+      )))
 
 (* Prelude.Strings.strM *)
-let _idris_Prelude_46_Strings_46_strM e0 =
+and _idris_Prelude_46_Strings_46_strM e0 =
   (match (
     _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0
       (match (match (raise (Idris_error "unsupported op: LStrEq")) with
@@ -1873,97 +1786,81 @@ let _idris_Prelude_46_Strings_46_strM e0 =
       _idris_really_95_believe_95_me
         (raise (Idris_error "LNothing"))
         (raise (Idris_error "LNothing"))
-        (
-          C_idris_Prelude_46_Strings_46_StrCons
-            (raise (Idris_error "unsupported op: LStrHead"))
-            (raise (Idris_error "unsupported op: LStrTail"))
-        )
-    ));;
+        C_idris_Prelude_46_Strings_46_StrCons ((raise (Idris_error "unsupported op: LStrHead")), (raise (Idris_error "unsupported op: LStrTail")))
+    ))
 
 (* Prelude.Strings.unpack *)
-let _idris_Prelude_46_Strings_46_unpack e0 =
+and _idris_Prelude_46_Strings_46_unpack e0 =
   (match (
     _idris_Prelude_46_Strings_46_strM
       e0
   ) with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
-    (
-      C_idris_Prelude_46_List_46__58__58_
-        in0
-        (
-          _idris_Prelude_46_Strings_46_unpack
-            in1
-        )
-    )
+    C_idris_Prelude_46_List_46__58__58_ (in0, (
+      _idris_Prelude_46_Strings_46_unpack
+        in1
+    ))
   | C_idris_Prelude_46_Strings_46_StrNil ->
-    C_idris_Prelude_46_List_46_Nil);;
+    C_idris_Prelude_46_List_46_Nil)
 
 (* unsafePerformPrimIO *)
-let _idris_unsafePerformPrimIO =
-  (raise (Idris_error "LNothing"));;
+and _idris_unsafePerformPrimIO =
+  (raise (Idris_error "LNothing"))
 
 (* world *)
-let _idris_world e0 =
-  e0;;
+and _idris_world e0 =
+  e0
 
 (* Prelude.Bool.|| *)
-let _idris_Prelude_46_Bool_46__124__124_ e0 e1 =
+and _idris_Prelude_46_Bool_46__124__124_ e0 e1 =
   (match e0 with
   | C_idris_Prelude_46_Bool_46_False ->
     Lazy.force (e1)
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Decidable.Equality.Decidable.Equality.Char implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Char_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Char_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Decidable.Equality.Decidable.Equality.Int implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Int_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Int_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Decidable.Equality.Decidable.Equality.Integer implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Integer_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Integer_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Decidable.Equality.Decidable.Equality.ManagedPtr implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_ManagedPtr_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_ManagedPtr_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Decidable.Equality.Decidable.Equality.Ptr implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Ptr_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Ptr_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Decidable.Equality.Decidable.Equality.String implementation of Decidable.Equality.DecEq, method decEq, primitiveNotEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_String_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
-  (raise (Idris_error "LNothing"));;
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_String_58__33_decEq_58_0_58_primitiveNotEq_58_0 =
+  (raise (Idris_error "LNothing"))
 
 (* Prelude.Prelude.Int implementation of Prelude.Enum, method enumFromTo, go *)
-let _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0 e0 e1 e2 e3 e4 =
+and _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0 e0 e1 e2 e3 e4 =
   (match e3 with
   | 0 ->
-    (
-      C_idris_Prelude_46_List_46__58__58_
-        e4
-        e2
-    )
+    C_idris_Prelude_46_List_46__58__58_ (e4, e2)
   | _ ->
     let in0 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
       (
         _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0
           (raise (Idris_error "LNothing"))
           (raise (Idris_error "LNothing"))
-          (
-            C_idris_Prelude_46_List_46__58__58_
-              e4
-              e2
-          )
+          C_idris_Prelude_46_List_46__58__58_ (e4, e2)
           in0
           (raise (Idris_error "unsupported op: LMinus (ATInt ITNative)"))
-      ));;
+      ))
 
 (* Prelude.Show.Prelude.Show.List a implementation of Prelude.Show.Show, method show, show' *)
-let _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32_a_58__33_show_58_0_58_show_39__58_0 e0 e1 e2 e3 e4 e5 =
+and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32_a_58__33_show_58_0_58_show_39__58_0 e0 e1 e2 e3 e4 e5 =
   (match e5 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (match in1 with
@@ -1980,10 +1877,10 @@ let _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_
           in1
       ))
   | C_idris_Prelude_46_List_46_Nil ->
-    e4);;
+    e4)
 
 (* Decidable.Equality.Decidable.Equality.Bool implementation of Decidable.Equality.DecEq, method decEq *)
-let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0 e0 e1 =
+and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Bool_46_False ->
     (match e0 with
@@ -1996,10 +1893,10 @@ let _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Eq
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Basics_46_No
     | C_idris_Prelude_46_Bool_46_True ->
-      C_idris_Prelude_46_Basics_46_Yes));;
+      C_idris_Prelude_46_Basics_46_Yes))
 
 (* Prelude.Prelude.Int implementation of Prelude.Enum, method enumFromTo *)
-let _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0 e0 e1 =
+and _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0 e0 e1 =
   (match (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__61__58_0
       e0
@@ -2015,10 +1912,10 @@ let _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58
         C_idris_Prelude_46_List_46_Nil
         (raise (Idris_error "unsupported op: LSExt ITNative ITBig"))
         e1
-    ));;
+    ))
 
 (* Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Eq, method == *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0 e0 e1 =
   (match e1 with
   | 0 ->
     (match e0 with
@@ -2041,10 +1938,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_
               in0
           ))
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Ordering implementation of Prelude.Interfaces.Eq, method == *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Eq_36_Ordering_58__33__61__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Eq_36_Ordering_58__33__61__61__58_0 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Interfaces_46_EQ ->
     (match e0 with
@@ -2065,10 +1962,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
     | _ ->
       C_idris_Prelude_46_Bool_46_False)
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Eq, method == *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Eq_36_Prec_58__33__61__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Eq_36_Prec_58__33__61__61__58_0 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Show_46_User (in0) ->
     (match e0 with
@@ -2089,10 +1986,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
-      C_idris_Prelude_46_Bool_46_True));;
+      C_idris_Prelude_46_Bool_46_True))
 
 (* Prelude.Foldable.Prelude.List.List implementation of Prelude.Foldable.Foldable, method foldr *)
-let _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0 e0 e1 e2 e3 e4 =
+and _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0 e0 e1 e2 e3 e4 =
   (match e4 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (
@@ -2110,20 +2007,20 @@ let _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_
         )
     )
   | C_idris_Prelude_46_List_46_Nil ->
-    e3);;
+    e3)
 
 (* Prelude.Monad.Prelude.List implementation of Prelude.Monad.Monad, method >>= *)
-let _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0 e0 e1 e2 e3 =
+and _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0 e0 e1 e2 e3 =
   (
     _idris_PE_95_concatMap_95_994c4fbe
       (raise (Idris_error "LNothing"))
       (raise (Idris_error "LNothing"))
       e3
       e2
-  );;
+  )
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method <= *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__61__58_0 e0 e1 =
   (match (
     _idris_Prelude_46_Interfaces_46__60_
       (raise (Idris_error "LNothing"))
@@ -2138,18 +2035,18 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
         e1
     ))
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method <=_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
   (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method >= *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__61__58_0 e0 e1 =
   (match (
     _idris_Prelude_46_Interfaces_46__62_
       (raise (Idris_error "LNothing"))
@@ -2164,18 +2061,18 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
         e1
     ))
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method >=_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
   (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0 e0 e1 =
   (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
@@ -2192,10 +2089,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
     | C_idris_Prelude_46_Bool_46_True ->
       C_idris_Prelude_46_Interfaces_46_LT)
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Interfaces_46_EQ);;
+    C_idris_Prelude_46_Interfaces_46_EQ)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method <= *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__61__58_0 e0 e1 =
   (match (
     _idris_Prelude_46_Interfaces_46__60_
       (raise (Idris_error "LNothing"))
@@ -2210,18 +2107,18 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
         e1
     ))
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method <=_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
   (match (raise (Idris_error "unsupported op: LEq (ATInt ITNative)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33_compare_58_0 e0 e1 =
   (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITNative)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
@@ -2238,10 +2135,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
     | C_idris_Prelude_46_Bool_46_True ->
       C_idris_Prelude_46_Interfaces_46_LT)
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Interfaces_46_EQ);;
+    C_idris_Prelude_46_Interfaces_46_EQ)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Integer implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Integer_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Integer_58__33_compare_58_0 e0 e1 =
   (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITBig)")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
@@ -2258,10 +2155,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
     | C_idris_Prelude_46_Bool_46_True ->
       C_idris_Prelude_46_Interfaces_46_LT)
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Interfaces_46_EQ);;
+    C_idris_Prelude_46_Interfaces_46_EQ)
 
 (* Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0 e0 e1 =
   (match e1 with
   | 0 ->
     (match e0 with
@@ -2283,10 +2180,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_
               _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat
               in2
               in1
-          )));;
+          )))
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method >= *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__61__58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__61__58_0 e0 e1 =
   (match (
     _idris_Prelude_46_Interfaces_46__62_
       (raise (Idris_error "LNothing"))
@@ -2301,18 +2198,18 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces
         e1
     ))
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Bool_46_True);;
+    C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method >=_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Prelude_46_Show_46_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
+and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Show_46_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Eq_36_Prec_58__33__61__61__58_0
       e0
       e1
-  );;
+  )
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33_compare_58_0 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Show_46_User (in0) ->
     (match e0 with
@@ -2345,10 +2242,10 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces
           _idris_Prelude_46_Show_46_precCon
             e1
         )
-    ));;
+    ))
 
 (* Prelude.Interfaces.Prelude.Interfaces.String implementation of Prelude.Interfaces.Ord, method compare *)
-let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_String_58__33_compare_58_0 e0 e1 =
+and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_String_58__33_compare_58_0 e0 e1 =
   (match (match (raise (Idris_error "unsupported op: LStrEq")) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
@@ -2365,20 +2262,20 @@ let _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
     | C_idris_Prelude_46_Bool_46_True ->
       C_idris_Prelude_46_Interfaces_46_LT)
   | C_idris_Prelude_46_Bool_46_True ->
-    C_idris_Prelude_46_Interfaces_46_EQ);;
+    C_idris_Prelude_46_Interfaces_46_EQ)
 
 (* Prelude.Show.Prelude.Show.(a, b) implementation of Prelude.Show.Show, method show *)
-let _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0 e0 e1 e2 e3 e4 e5 e6 =
+and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0 e0 e1 e2 e3 e4 e5 e6 =
   (match e6 with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
-    (raise (Idris_error "unsupported op: LStrConcat")));;
+    (raise (Idris_error "unsupported op: LStrConcat")))
 
 (* Prelude.Show.Prelude.Show.String implementation of Prelude.Show.Show, method show *)
-let _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0 e0 =
-  (raise (Idris_error "unsupported op: LStrCons"));;
+and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0 e0 =
+  (raise (Idris_error "unsupported op: LStrCons"))
 
 (* Prelude.List.sortBy, splitRec *)
-let _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2 e0 e1 e2 e3 e4 e5 =
+and _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2 e0 e1 e2 e3 e4 e5 =
   (match e4 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (match e3 with
@@ -2405,183 +2302,36 @@ let _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2 e0 e1 e2 e3 e4 e5 =
             )
         )
       | _ ->
-        (
-          C_idris_Builtins_46_MkPair
-            (
-              e5
-                C_idris_Prelude_46_List_46_Nil
-            )
-            e4
-        ))
-    | _ ->
-      (
-        C_idris_Builtins_46_MkPair
-          (
-            e5
-              C_idris_Prelude_46_List_46_Nil
-          )
-          e4
-      ))
-  | _ ->
-    (
-      C_idris_Builtins_46_MkPair
-        (
+        C_idris_Builtins_46_MkPair ((
           e5
             C_idris_Prelude_46_List_46_Nil
-        )
-        e4
-    ));;
+        ), e4))
+    | _ ->
+      C_idris_Builtins_46_MkPair ((
+        e5
+          C_idris_Prelude_46_List_46_Nil
+      ), e4))
+  | _ ->
+    C_idris_Builtins_46_MkPair ((
+      e5
+        C_idris_Prelude_46_List_46_Nil
+    ), e4))
 
 (* {Prelude.List.sortBy, splitRec_lam0} *)
-let _idris__123_Prelude_46_List_46_sortBy_44__32_splitRec_95_lam0_125_ in0 in6 =
-  (
-    C_idris_Prelude_46_List_46__58__58_
-      in0
-      in6
-  );;
+and _idris__123_Prelude_46_List_46_sortBy_44__32_splitRec_95_lam0_125_ in0 in6 =
+  C_idris_Prelude_46_List_46__58__58_ (in0, in6)
 
 (* Prelude.Show.showLitChar, asciiTab *)
-let _idris_Prelude_46_Show_46_showLitChar_58_asciiTab_58_10 e0 =
-  (
-    C_idris_Prelude_46_List_46__58__58_
-      "NUL"
-      (
-        C_idris_Prelude_46_List_46__58__58_
-          "SOH"
-          (
-            C_idris_Prelude_46_List_46__58__58_
-              "STX"
-              (
-                C_idris_Prelude_46_List_46__58__58_
-                  "ETX"
-                  (
-                    C_idris_Prelude_46_List_46__58__58_
-                      "EOT"
-                      (
-                        C_idris_Prelude_46_List_46__58__58_
-                          "ENQ"
-                          (
-                            C_idris_Prelude_46_List_46__58__58_
-                              "ACK"
-                              (
-                                C_idris_Prelude_46_List_46__58__58_
-                                  "BEL"
-                                  (
-                                    C_idris_Prelude_46_List_46__58__58_
-                                      "BS"
-                                      (
-                                        C_idris_Prelude_46_List_46__58__58_
-                                          "HT"
-                                          (
-                                            C_idris_Prelude_46_List_46__58__58_
-                                              "LF"
-                                              (
-                                                C_idris_Prelude_46_List_46__58__58_
-                                                  "VT"
-                                                  (
-                                                    C_idris_Prelude_46_List_46__58__58_
-                                                      "FF"
-                                                      (
-                                                        C_idris_Prelude_46_List_46__58__58_
-                                                          "CR"
-                                                          (
-                                                            C_idris_Prelude_46_List_46__58__58_
-                                                              "SO"
-                                                              (
-                                                                C_idris_Prelude_46_List_46__58__58_
-                                                                  "SI"
-                                                                  (
-                                                                    C_idris_Prelude_46_List_46__58__58_
-                                                                      "DLE"
-                                                                      (
-                                                                        C_idris_Prelude_46_List_46__58__58_
-                                                                          "DC1"
-                                                                          (
-                                                                            C_idris_Prelude_46_List_46__58__58_
-                                                                              "DC2"
-                                                                              (
-                                                                                C_idris_Prelude_46_List_46__58__58_
-                                                                                  "DC3"
-                                                                                  (
-                                                                                    C_idris_Prelude_46_List_46__58__58_
-                                                                                      "DC4"
-                                                                                      (
-                                                                                        C_idris_Prelude_46_List_46__58__58_
-                                                                                          "NAK"
-                                                                                          (
-                                                                                            C_idris_Prelude_46_List_46__58__58_
-                                                                                              "SYN"
-                                                                                              (
-                                                                                                C_idris_Prelude_46_List_46__58__58_
-                                                                                                  "ETB"
-                                                                                                  (
-                                                                                                    C_idris_Prelude_46_List_46__58__58_
-                                                                                                      "CAN"
-                                                                                                      (
-                                                                                                        C_idris_Prelude_46_List_46__58__58_
-                                                                                                          "EM"
-                                                                                                          (
-                                                                                                            C_idris_Prelude_46_List_46__58__58_
-                                                                                                              "SUB"
-                                                                                                              (
-                                                                                                                C_idris_Prelude_46_List_46__58__58_
-                                                                                                                  "ESC"
-                                                                                                                  (
-                                                                                                                    C_idris_Prelude_46_List_46__58__58_
-                                                                                                                      "FS"
-                                                                                                                      (
-                                                                                                                        C_idris_Prelude_46_List_46__58__58_
-                                                                                                                          "GS"
-                                                                                                                          (
-                                                                                                                            C_idris_Prelude_46_List_46__58__58_
-                                                                                                                              "RS"
-                                                                                                                              (
-                                                                                                                                C_idris_Prelude_46_List_46__58__58_
-                                                                                                                                  "US"
-                                                                                                                                  C_idris_Prelude_46_List_46_Nil
-                                                                                                                              )
-                                                                                                                          )
-                                                                                                                      )
-                                                                                                                  )
-                                                                                                              )
-                                                                                                          )
-                                                                                                      )
-                                                                                                  )
-                                                                                              )
-                                                                                          )
-                                                                                      )
-                                                                                  )
-                                                                              )
-                                                                          )
-                                                                      )
-                                                                  )
-                                                              )
-                                                          )
-                                                      )
-                                                  )
-                                              )
-                                          )
-                                      )
-                                  )
-                              )
-                          )
-                      )
-                  )
-              )
-          )
-      )
-  );;
+and _idris_Prelude_46_Show_46_showLitChar_58_asciiTab_58_10 e0 =
+  C_idris_Prelude_46_List_46__58__58_ ("NUL", C_idris_Prelude_46_List_46__58__58_ ("SOH", C_idris_Prelude_46_List_46__58__58_ ("STX", C_idris_Prelude_46_List_46__58__58_ ("ETX", C_idris_Prelude_46_List_46__58__58_ ("EOT", C_idris_Prelude_46_List_46__58__58_ ("ENQ", C_idris_Prelude_46_List_46__58__58_ ("ACK", C_idris_Prelude_46_List_46__58__58_ ("BEL", C_idris_Prelude_46_List_46__58__58_ ("BS", C_idris_Prelude_46_List_46__58__58_ ("HT", C_idris_Prelude_46_List_46__58__58_ ("LF", C_idris_Prelude_46_List_46__58__58_ ("VT", C_idris_Prelude_46_List_46__58__58_ ("FF", C_idris_Prelude_46_List_46__58__58_ ("CR", C_idris_Prelude_46_List_46__58__58_ ("SO", C_idris_Prelude_46_List_46__58__58_ ("SI", C_idris_Prelude_46_List_46__58__58_ ("DLE", C_idris_Prelude_46_List_46__58__58_ ("DC1", C_idris_Prelude_46_List_46__58__58_ ("DC2", C_idris_Prelude_46_List_46__58__58_ ("DC3", C_idris_Prelude_46_List_46__58__58_ ("DC4", C_idris_Prelude_46_List_46__58__58_ ("NAK", C_idris_Prelude_46_List_46__58__58_ ("SYN", C_idris_Prelude_46_List_46__58__58_ ("ETB", C_idris_Prelude_46_List_46__58__58_ ("CAN", C_idris_Prelude_46_List_46__58__58_ ("EM", C_idris_Prelude_46_List_46__58__58_ ("SUB", C_idris_Prelude_46_List_46__58__58_ ("ESC", C_idris_Prelude_46_List_46__58__58_ ("FS", C_idris_Prelude_46_List_46__58__58_ ("GS", C_idris_Prelude_46_List_46__58__58_ ("RS", C_idris_Prelude_46_List_46__58__58_ ("US", C_idris_Prelude_46_List_46_Nil))))))))))))))))))))))))))))))))
 
 (* Prelude.Show.showLitChar, getAt *)
-let _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10 e0 e1 e2 =
+and _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10 e0 e1 e2 =
   (match e2 with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (match e1 with
     | 0 ->
-      (
-        C_idris_Prelude_46_Maybe_46_Just
-          in0
-      )
+      C_idris_Prelude_46_Maybe_46_Just (in0)
     | _ ->
       let in2 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
         (
@@ -2591,10 +2341,10 @@ let _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10 e0 e1 e2 =
             in1
         ))
   | C_idris_Prelude_46_List_46_Nil ->
-    C_idris_Prelude_46_Maybe_46_Nothing);;
+    C_idris_Prelude_46_Maybe_46_Nothing)
 
 (* with block in Prelude.Strings.strM *)
-let _idris__95_Prelude_46_Strings_46_strM_95_with_95_21 e0 e1 =
+and _idris__95_Prelude_46_Strings_46_strM_95_with_95_21 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Basics_46_No ->
     (
@@ -2608,50 +2358,42 @@ let _idris__95_Prelude_46_Strings_46_strM_95_with_95_21 e0 e1 =
       _idris_really_95_believe_95_me
         (raise (Idris_error "LNothing"))
         (raise (Idris_error "LNothing"))
-        (
-          C_idris_Prelude_46_Strings_46_StrCons
-            (raise (Idris_error "unsupported op: LStrHead"))
-            (raise (Idris_error "unsupported op: LStrTail"))
-        )
-    ));;
+        C_idris_Prelude_46_Strings_46_StrCons ((raise (Idris_error "unsupported op: LStrHead")), (raise (Idris_error "unsupported op: LStrTail")))
+    ))
 
 (* with block in Prelude.Strings.unpack *)
-let _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24 e0 e1 =
+and _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24 e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
-    (
-      C_idris_Prelude_46_List_46__58__58_
-        in0
+    C_idris_Prelude_46_List_46__58__58_ (in0, (
+      _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24
+        (raise (Idris_error "LNothing"))
         (
-          _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24
-            (raise (Idris_error "LNothing"))
-            (
-              _idris_Prelude_46_Strings_46_strM
-                in1
-            )
+          _idris_Prelude_46_Strings_46_strM
+            in1
         )
-    )
+    ))
   | C_idris_Prelude_46_Strings_46_StrNil ->
-    C_idris_Prelude_46_List_46_Nil);;
+    C_idris_Prelude_46_List_46_Nil)
 
 (* with block in Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method < *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__60__58_0_95_with_95_25 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__60__58_0_95_with_95_25 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method > *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__58_0_95_with_95_27 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__58_0_95_with_95_27 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Show.firstCharIs *)
-let _idris__95_Prelude_46_Show_46_firstCharIs_95_with_95_44 e0 e1 e2 =
+and _idris__95_Prelude_46_Show_46_firstCharIs_95_with_95_44 e0 e1 e2 =
   (match e2 with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
     (
@@ -2659,66 +2401,66 @@ let _idris__95_Prelude_46_Show_46_firstCharIs_95_with_95_44 e0 e1 e2 =
         in0
     )
   | C_idris_Prelude_46_Strings_46_StrNil ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method < *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__60__58_0_95_with_95_82 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__60__58_0_95_with_95_82 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method > *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__62__58_0_95_with_95_84 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__62__58_0_95_with_95_84 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method < *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__58_0_95_with_95_96 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__58_0_95_with_95_96 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method > *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__62__58_0_95_with_95_98 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__62__58_0_95_with_95_98 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method < *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__58_0_95_with_95_129 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__58_0_95_with_95_129 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method > *)
-let _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__58_0_95_with_95_131 e0 e1 e2 =
+and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__58_0_95_with_95_131 e0 e1 e2 =
   (match e0 with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Nat.Nat implementation of Prelude.Interfaces.Eq *)
-let _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat meth0 meth1 =
+and _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat meth0 meth1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0
       meth0
       meth1
-  );;
+  )
 
 (* Prelude.List.List implementation of Prelude.Foldable.Foldable *)
-let _idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List meth0 meth1 meth2 meth3 meth4 =
+and _idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List meth0 meth1 meth2 meth3 meth4 =
   (
     _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0
       (raise (Idris_error "LNothing"))
@@ -2726,26 +2468,21 @@ let _idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List meth0 
       meth2
       meth3
       meth4
-  );;
+  )
 
 (* Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord *)
-let _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char =
-  (
-    C_idris_Prelude_46_Interfaces_46_Ord_95_ictor
-      _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_
-      _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_
-      _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_
-  );;
+and _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char =
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam5} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
       in4
-  );;
+  )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam4} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2756,17 +2493,17 @@ let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam3} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
       in2
-  );;
+  )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam2} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2777,41 +2514,36 @@ let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam1} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
       in0
-  );;
+  )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
+and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0
       in0
       in1
-  );;
+  )
 
 (* Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord *)
-let _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int =
-  (
-    C_idris_Prelude_46_Interfaces_46_Ord_95_ictor
-      _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_
-      _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_
-      _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_
-  );;
+and _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int =
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam5} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
       in4
-  );;
+  )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam4} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2822,17 +2554,17 @@ let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam3} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
       in2
-  );;
+  )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam2} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2843,41 +2575,36 @@ let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam1} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
       in0
-  );;
+  )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam0} *)
-let _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
+and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33_compare_58_0
       in0
       in1
-  );;
+  )
 
 (* Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord *)
-let _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat =
-  (
-    C_idris_Prelude_46_Interfaces_46_Ord_95_ictor
-      _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_
-      _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_
-      _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_
-  );;
+and _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat =
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam5} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
       in4
-  );;
+  )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam4} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2888,17 +2615,17 @@ let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Inte
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam3} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
       in2
-  );;
+  )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam2} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2909,41 +2636,36 @@ let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Inte
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam1} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
       in0
-  );;
+  )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam0} *)
-let _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
+and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0
       in0
       in1
-  );;
+  )
 
 (* Prelude.Show.Prec implementation of Prelude.Interfaces.Ord *)
-let _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec =
-  (
-    C_idris_Prelude_46_Interfaces_46_Ord_95_ictor
-      _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_
-      _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_
-      _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_
-  );;
+and _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec =
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam5} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
       in4
-  );;
+  )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam4} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2954,17 +2676,17 @@ let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_In
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam3} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
       in2
-  );;
+  )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam2} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
   (match (
     _idris_Prelude_46_Interfaces_46_compare
       (raise (Idris_error "LNothing"))
@@ -2975,60 +2697,56 @@ let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_In
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
-    C_idris_Prelude_46_Bool_46_False);;
+    C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam1} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
       in0
-  );;
+  )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam0} *)
-let _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
+and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33_compare_58_0
       in0
       in1
-  );;
+  )
 
 (* Prelude.Show.Int implementation of Prelude.Show.Show *)
-let _idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int =
-  (
-    C_idris_Prelude_46_Show_46_Show_95_ictor
-      _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_
-      _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_
-  );;
+and _idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int =
+  C_idris_Prelude_46_Show_46_Show_95_ictor (_idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_, _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_)
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam2} *)
-let _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_ in1 =
+and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_ in1 =
   (
     _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam1_125_
       in1
-  );;
+  )
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam1} *)
-let _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam1_125_ in1 in2 =
+and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam1_125_ in1 in2 =
   (
     _idris_Prelude_46_Show_46_primNumShow
       (raise (Idris_error "LNothing"))
       _idris_prim_95__95_toStrInt
       in1
       in2
-  );;
+  )
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam0} *)
-let _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_ in0 =
+and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_ in0 =
   (
     _idris_Prelude_46_Show_46_showPrec
       (raise (Idris_error "LNothing"))
       _idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int
       C_idris_Prelude_46_Show_46_Open
       in0
-  );;
+  )
 
 (* Prelude.List.case block in sortBy at ./Prelude/List.idr:779:22 *)
-let _idris_Prelude_46_List_46_sortBy_95__95__95__95__95_Prelude_95__95_List_95__95_idr_95_779_95_22_95_case e0 e1 e2 e3 =
+and _idris_Prelude_46_List_46_sortBy_95__95__95__95__95_Prelude_95__95_List_95__95_idr_95_779_95_22_95_case e0 e1 e2 e3 =
   (match e3 with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
     (
@@ -3047,10 +2765,10 @@ let _idris_Prelude_46_List_46_sortBy_95__95__95__95__95_Prelude_95__95_List_95__
             e1
             in1
         )
-    ));;
+    ))
 
 (* Prelude.Show.case block in showLitChar at ./Prelude/Show.idr:128:27 *)
-let _idris_Prelude_46_Show_46_showLitChar_95__95__95__95__95_Prelude_95__95_Show_95__95_idr_95_128_95_27_95_case e0 e1 =
+and _idris_Prelude_46_Show_46_showLitChar_95__95__95__95__95_Prelude_95__95_Show_95__95_idr_95_128_95_27_95_case e0 e1 =
   (match e1 with
   | C_idris_Prelude_46_Maybe_46_Just (in0) ->
     (
@@ -3103,32 +2821,32 @@ let _idris_Prelude_46_Show_46_showLitChar_95__95__95__95__95_Prelude_95__95_Show
                   (raise (Idris_error "unsupported op: LChInt ITNative"))
               )
           )
-      )));;
+      )))
 
 (* Prelude.Show.{case block in showLitChar at ./Prelude/Show.idr:128:27_lam0} *)
-let _idris_Prelude_46_Show_46__123_case_32_block_32_in_32_showLitChar_32_at_32__46__47_Prelude_47_Show_46_idr_58_128_58_27_95_lam0_125_ in0 in1 =
-  (raise (Idris_error "unsupported op: LStrConcat"));;
+and _idris_Prelude_46_Show_46__123_case_32_block_32_in_32_showLitChar_32_at_32__46__47_Prelude_47_Show_46_idr_58_128_58_27_95_lam0_125_ in0 in1 =
+  (raise (Idris_error "unsupported op: LStrConcat"))
 
 (* case block in io_bind at IO.idr:107:34 *)
-let _idris_io_95_bind_95_IO_95__95_idr_95_107_95_34_95_case e0 e1 e2 e3 e4 e5 e6 e7 =
+and _idris_io_95_bind_95_IO_95__95_idr_95_107_95_34_95_case e0 e1 e2 e3 e4 e5 e6 e7 =
   (
     e7
       e5
-  );;
+  )
 
 (* case block in Void *)
-let _idris_Void_95_case =
-  (raise (Idris_error "LNothing"));;
+and _idris_Void_95_case =
+  (raise (Idris_error "LNothing"))
 
 (* <<Void eliminator>> *)
-let _idris_Void_95_elim =
-  (raise (Idris_error "LNothing"));;
+and _idris_Void_95_elim =
+  (raise (Idris_error "LNothing"))
 
 (* {runMain0} *)
-let runMain0 =
+and runMain0 =
   Lazy.force ((
     _idris_Main_46_main
       (raise (Idris_error "LNothing"))
-  ));;
+  ))
 
 let _ = runMain0

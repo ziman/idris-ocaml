@@ -142,6 +142,7 @@ codegenOCaml ci = writeFile (outputFile ci) (render "(* " " *)" source)
     source =
       ocamlPreamble
       $$ cgCtors (M.elems ctors) $$ blankLine
+      $$ text "let rec __hello_world__ = \"hello world!\""
       $$ definitions
       $$ ocamlLauncher
 
@@ -183,13 +184,14 @@ cgN cs n
 cgDef :: M.Map Name LDecl -> (Name, LDecl) -> Doc
 cgDef cs (n, LFun opts name' args body) =
     (blankLine <?> show n)
-    $$ (text "let" <+> cgName n <+> hsep (map cgName args)  <+> text "=")
-    $$ (indent (cgExp cs [] body) <> text ";;")
+    $$ (text "and" <+> cgName n <+> hsep (map cgName args)  <+> text "=")
+    $$ (indent (cgExp cs [] body))
     $$ blankLine
 
 cgExp :: M.Map Name LDecl -> [Name] -> LExp -> Doc
 cgExp cs ns (LV (Glob n)) = cgN cs n
 cgExp cs ns (LV (Loc i)) = cgN cs (ns !! i)
+cgExp cs ns (LApp _ (LV (Glob n)) args) = cgCApp cs n (map (cgExp cs ns) args)
 cgExp cs ns (LApp _ f args) = cgApp (cgExp cs ns f) (map (cgExp cs ns) args)
 cgExp cs ns (LLazyApp n args) = cgApp (cgN cs n) (map (cgExp cs ns) args)
 cgExp cs ns (LLazyExp e) = text "lazy" <+> parens (cgExp cs ns e)
@@ -198,7 +200,7 @@ cgExp cs ns (LLet n t e) =
     (text "let" <+> cgName n <+> text "=" <+> cgExp cs ns t <+> text "in")
     $$ indent (cgExp cs ns e)
 cgExp cs ns (LLam lns e) = text "fun" <+> hsep (map cgName lns) <+> text "->" <+> cgExp cs (reverse lns ++ ns) e
-cgExp cs ns (LCon loc tag cn args) = cgApp (cgN cs cn) (map (cgExp cs ns) args)
+cgExp cs ns (LCon loc tag cn args) = cgCApp cs cn (map (cgExp cs ns) args)
 cgExp cs ns (LCase _ scrut alts) = parens (
         (text "match" <+> cgExp cs ns scrut <+> text "with")
         $$ vcat (map (cgAlt cs ns) alts)
@@ -222,18 +224,19 @@ cgApp f []   = f
 -- cgApp f args = parens (f <+> hsep args)
 cgApp f args = text "(" $$ indent (f $$ indent (vcat args)) $$ text ")"
 
-cgCApp :: Expr -> [Expr] -> Expr
-cgCApp f args = hsep (f : args)
+cgCApp :: M.Map Name LDecl -> Name -> [Expr] -> Expr
+cgCApp cs cn [] = cgN cs cn
+
+cgCApp cs cn args
+    | Just (LConstructor n' tag arity) <- M.lookup cn cs
+    = cgN cs cn <+> parens (hsep $ punctuate comma args)
+
+    | otherwise
+    = cgApp (cgName cn) args
 
 cgAlt :: M.Map Name LDecl -> [Name] -> LAlt -> Doc
-cgAlt cs ns (LConCase _ cn [] rhs) =
-    text "|" <+> cgN cs cn <+> text "->"
-    $$ indent (cgExp cs ns rhs)
 cgAlt cs ns (LConCase _ cn args rhs) =
-    text "|"
-    <+> cgN cs cn
-    <+> parens (hsep (punctuate comma $ map cgName args))
-    <+> text "->"
+    text "|" <+> cgCApp cs cn (map cgName args) <+> text "->"
     $$ indent (cgExp cs ns rhs)
 cgAlt cs ns (LConstCase c rhs) =
     text "|" <+> cgConst c <+> text "->"
