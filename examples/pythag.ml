@@ -444,24 +444,25 @@ type value =
   ;;
 
 let rec __hello_world__ = "hello world!"
+
 (* Prelude.Bool.&& *)
 and _idris_Prelude_46_Bool_46__38__38_ e0 e1 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_Bool_46_False
   | C_idris_Prelude_46_Bool_46_True ->
-    Lazy.force (e1))
+    Lazy.force ((Obj.magic (e1))))
 
 (* Prelude.List.++ *)
 and _idris_Prelude_46_List_46__43__43_ e0 e1 e2 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    C_idris_Prelude_46_List_46__58__58_ (in0, (
+    C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic ((
       _idris_Prelude_46_List_46__43__43_
-        (raise (Idris_error "LNothing"))
-        in1
-        e2
-    ))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (in1))
+        (Obj.magic (e2))
+    ))))
   | C_idris_Prelude_46_List_46_Nil ->
     e2)
 
@@ -469,15 +470,15 @@ and _idris_Prelude_46_List_46__43__43_ e0 e1 e2 =
 and _idris_Prelude_46_Basics_46__46_ e0 e1 e2 e3 e4 _idris_x =
   (
     e3
-      (
+      (Obj.magic ((
         e4
-          _idris_x
-      )
+          (Obj.magic (_idris_x))
+      )))
   )
 
 (* Prelude.Interfaces.< *)
 and _idris_Prelude_46_Interfaces_46__60_ e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
     in1)
 
@@ -491,18 +492,18 @@ and _idris_Prelude_46_Interfaces_46__61__61_ e0 e1 =
 
 (* Prelude.Interfaces.> *)
 and _idris_Prelude_46_Interfaces_46__62_ e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
     in2)
 
 (* Force *)
 and _idris_Force e0 e1 e2 =
-  let in0 = Lazy.force (e2) in
+  let in0 = Lazy.force ((Obj.magic (e2))) in
     in0
 
 (* PE_(a, b) implementation of Prelude.Show.Show_159bbfaf *)
 and _idris_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf =
-  C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_)
+  C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_)))
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf26} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf26_125_ in13 =
@@ -512,13 +513,13 @@ and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_S
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf25_125_ in14 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_)
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_)
-      in14
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_)))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf24_125_)))))
+      (Obj.magic (in14))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf24} *)
@@ -529,114 +530,114 @@ and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_S
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf23_125_ in20 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_)
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_)
-      in20
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_)))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_)))))
+      (Obj.magic (in20))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf22} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf22_125_ in25 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf21_125_
-      in25
+      (Obj.magic (in25))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf21} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf21_125_ in25 in26 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in25
-      in26
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in25))
+      (Obj.magic (in26))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf20} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf20_125_ in24 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in24
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in24))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf19} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf19_125_ in22 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf18_125_
-      in22
+      (Obj.magic (in22))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf18} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf18_125_ in22 in23 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in22
-      in23
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in22))
+      (Obj.magic (in23))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf17} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf17_125_ in21 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in21
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in21))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf16} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf16_125_ in18 =
   (
     _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec
-      in18
+      (Obj.magic (in18))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf15} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf15_125_ in16 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf14_125_
-      in16
+      (Obj.magic (in16))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf14} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf14_125_ in16 in17 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in16
-      in17
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in16))
+      (Obj.magic (in17))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf13} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf13_125_ in15 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in15
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in15))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf12} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf12_125_ in0 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_)
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_)
-      in0
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_)))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf11_125_)))))
+      (Obj.magic (in0))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf11} *)
@@ -647,123 +648,123 @@ and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_S
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf10_125_ in6 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_)
-      C_idris_Prelude_46_Show_46_Show_95_ictor (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_, _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_)
-      in6
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_)))))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_)), (Obj.magic (_idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_)))))
+      (Obj.magic (in6))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf9} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf9_125_ in11 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf8_125_
-      in11
+      (Obj.magic (in11))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf8} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf8_125_ in11 in12 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in11
-      in12
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in11))
+      (Obj.magic (in12))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf7} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf7_125_ in10 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in10
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in10))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf6} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf6_125_ in8 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf5_125_
-      in8
+      (Obj.magic (in8))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf5} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf5_125_ in8 in9 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in8
-      in9
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in8))
+      (Obj.magic (in9))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf4} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf4_125_ in7 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in7
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in7))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf3} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf3_125_ in4 =
   (
     _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec
-      in4
+      (Obj.magic (in4))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf2} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf2_125_ in2 =
   (
     _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf1_125_
-      in2
+      (Obj.magic (in2))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf1} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf1_125_ in2 in3 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in2
-      in3
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in2))
+      (Obj.magic (in3))
   )
 
 (* {PE_(a, b) implementation of Prelude.Show.Show_159bbfaf0} *)
 and _idris__123_PE_95__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_95_159bbfaf0_125_ in1 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      C_idris_Prelude_46_Show_46_Open
-      in1
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in1))
   )
 
 (* PE_@@constructor of Prelude.Algebra.Monoid#Semigroup ty_e557f19a *)
 and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Algebra_46_Monoid_35_Semigroup_32_ty_95_e557f19a e0 meth0 meth1 =
   (
     _idris_Prelude_46_List_46__43__43_
-      (raise (Idris_error "LNothing"))
-      meth0
-      meth1
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (meth0))
+      (Obj.magic (meth1))
   )
 
 (* PE_@@constructor of Prelude.Applicative.Alternative#Applicative f_ae124204 *)
 and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Applicative_46_Alternative_35_Applicative_32_f_95_ae124204 meth0 meth1 =
-  C_idris_Prelude_46_List_46__58__58_ (meth1, C_idris_Prelude_46_List_46_Nil)
+  C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (meth1)), (Obj.magic (C_idris_Prelude_46_List_46_Nil)))
 
 (* PE_@@constructor of Prelude.Monad.Monad#Applicative m_abd46658 *)
 and _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658 meth0 meth1 =
-  C_idris_Prelude_46_List_46__58__58_ (meth1, C_idris_Prelude_46_List_46_Nil)
+  C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (meth1)), (Obj.magic (C_idris_Prelude_46_List_46_Nil)))
 
 (* PE_Prelude.Show.(a, b) implementation of Prelude.Show.Show, method show_8128b9ec *)
 and _idris_PE_95_Prelude_46_Show_46__40_a_44__32_b_41__32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_8128b9ec e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
     (raise (Idris_error "unsupported op: LStrConcat")))
 
@@ -775,32 +776,32 @@ and _idris_PE_95_Prelude_46_Show_46_List_32_a_32_implementation_32_of_32_Prelude
 and _idris_PE_95_concatMap_95_994c4fbe e0 e1 e2 e3 =
   (
     _idris_PE_95_foldr_95_c8d7af37
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris__123_PE_95_concatMap_95_994c4fbe0_125_
-          e2
-      )
-      (
+          (Obj.magic (e2))
+      )))
+      (Obj.magic ((
         _idris_PE_95_neutral_95_e557f19a
-          (raise (Idris_error "LNothing"))
-      )
-      e3
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+      )))
+      (Obj.magic (e3))
   )
 
 (* {PE_concatMap_994c4fbe0} *)
 and _idris__123_PE_95_concatMap_95_994c4fbe0_125_ e2 in0 =
   (
     _idris_Prelude_46_Algebra_46__60__43__62_
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Algebra_46_Monoid_35_Semigroup_32_ty_95_e557f19a
-          (raise (Idris_error "LNothing"))
-      )
-      (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+      )))
+      (Obj.magic ((
         e2
-          in0
-      )
+          (Obj.magic (in0))
+      )))
   )
 
 (* PE_empty_4bb299b7 *)
@@ -811,11 +812,11 @@ and _idris_PE_95_empty_95_4bb299b7 e0 =
 and _idris_PE_95_foldr_95_c8d7af37 e0 e1 e2 e3 e4 =
   (
     _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      e2
-      e3
-      e4
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (e2))
+      (Obj.magic (e3))
+      (Obj.magic (e4))
   )
 
 (* PE_neutral_e557f19a *)
@@ -826,23 +827,23 @@ and _idris_PE_95_neutral_95_e557f19a e0 =
 and _idris_PE_95_printLn_39__95_1452bb16 e0 e1 =
   (
     _idris_io_95_bind
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris__123_PE_95_printLn_39__95_1452bb160_125_
-          e1
-      )
-      _idris__123_PE_95_printLn_39__95_1452bb161_125_
+          (Obj.magic (e1))
+      )))
+      (Obj.magic (_idris__123_PE_95_printLn_39__95_1452bb161_125_))
   )
 
 (* {PE_printLn'_1452bb161} *)
 and _idris__123_PE_95_printLn_39__95_1452bb161_125_ in1 =
   (
     _idris_io_95_return
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_MkUnit
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_MkUnit))
   )
 
 (* {PE_printLn'_1452bb160} *)
@@ -853,23 +854,23 @@ and _idris__123_PE_95_printLn_39__95_1452bb160_125_ e1 in0 =
 and _idris_PE_95_printLn_39__95_cfef5baf e0 e1 =
   (
     _idris_io_95_bind
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris__123_PE_95_printLn_39__95_cfef5baf0_125_
-          e1
-      )
-      _idris__123_PE_95_printLn_39__95_cfef5baf1_125_
+          (Obj.magic (e1))
+      )))
+      (Obj.magic (_idris__123_PE_95_printLn_39__95_cfef5baf1_125_))
   )
 
 (* {PE_printLn'_cfef5baf1} *)
 and _idris__123_PE_95_printLn_39__95_cfef5baf1_125_ in1 =
   (
     _idris_io_95_return
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      C_idris_MkUnit
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (C_idris_MkUnit))
   )
 
 (* {PE_printLn'_cfef5baf0} *)
@@ -880,8 +881,8 @@ and _idris__123_PE_95_printLn_39__95_cfef5baf0_125_ e1 in0 =
 and _idris_PE_95_printLn_95_32c49909 e0 =
   (
     _idris_PE_95_printLn_39__95_1452bb16
-      (raise (Idris_error "LNothing"))
-      e0
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (e0))
   )
 
 (* PE_show_24967653 *)
@@ -896,33 +897,33 @@ and _idris__123_PE_95_show_95_249676532_125_ in1 =
 and _idris__123_PE_95_show_95_249676531_125_ in2 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0
-      in2
+      (Obj.magic (in2))
   )
 
 (* {PE_show_249676530} *)
 and _idris__123_PE_95_show_95_249676530_125_ in0 =
   (
     _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_String_58__33_show_58_0
-      in0
+      (Obj.magic (in0))
   )
 
 (* PE_show_78b4bfbe *)
 and _idris_PE_95_show_95_78b4bfbe e0 =
   (
     _idris_PE_95_Prelude_46_Show_46_List_32_a_32_implementation_32_of_32_Prelude_46_Show_46_Show_44__32_method_32_show_95_a9fea4bf
-      e0
+      (Obj.magic (e0))
   )
 
 (* call__IO *)
 and _idris_call_95__95_IO e0 e1 e2 =
   (
     e2
-      (raise (Idris_error "LNothing"))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
   )
 
 (* Prelude.Interfaces.compare *)
 and _idris_Prelude_46_Interfaces_46_compare e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (in0, in1, in2) ->
     in0)
 
@@ -930,8 +931,8 @@ and _idris_Prelude_46_Interfaces_46_compare e0 e1 =
 and _idris_Prelude_46_Foldable_46_foldr e0 e1 e2 e3 =
   (
     e3
-      e1
-      e2
+      (Obj.magic (e1))
+      (Obj.magic (e2))
   )
 
 (* Prelude.Basics.id *)
@@ -940,15 +941,15 @@ and _idris_Prelude_46_Basics_46_id e0 e1 =
 
 (* Prelude.Bool.ifThenElse *)
 and _idris_Prelude_46_Bool_46_ifThenElse e0 e1 e2 e3 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force (e3)
+    Lazy.force ((Obj.magic (e3)))
   | C_idris_Prelude_46_Bool_46_True ->
-    Lazy.force (e2))
+    Lazy.force ((Obj.magic (e2))))
 
 (* Prelude.Interfaces.intToBool *)
 and _idris_Prelude_46_Interfaces_46_intToBool e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -958,49 +959,49 @@ and _idris_Prelude_46_Interfaces_46_intToBool e0 =
 and _idris_io_95_bind e0 e1 e2 e3 e4 _idris_w =
   (
     io_bind2
-      e0
-      e1
-      e2
-      e3
-      e4
-      _idris_w
-      (
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+      (Obj.magic (e2))
+      (Obj.magic (e3))
+      (Obj.magic (e4))
+      (Obj.magic (_idris_w))
+      (Obj.magic ((
         e3
-          _idris_w
-      )
+          (Obj.magic (_idris_w))
+      )))
   )
 
 (* {io_bind2} *)
 and io_bind2 e0 e1 e2 e3 e4 _idris_w =
   (
     io_bind1
-      e0
-      e1
-      e2
-      e3
-      e4
-      _idris_w
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+      (Obj.magic (e2))
+      (Obj.magic (e3))
+      (Obj.magic (e4))
+      (Obj.magic (_idris_w))
   )
 
 (* {io_bind1} *)
 and io_bind1 e0 e1 e2 e3 e4 _idris_w in0 =
   (
     io_bind0
-      e0
-      e1
-      e2
-      e3
-      e4
-      _idris_w
-      in0
-      _idris_w
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+      (Obj.magic (e2))
+      (Obj.magic (e3))
+      (Obj.magic (e4))
+      (Obj.magic (_idris_w))
+      (Obj.magic (in0))
+      (Obj.magic (_idris_w))
   )
 
 (* {io_bind0} *)
 and io_bind0 e0 e1 e2 e3 e4 _idris_w in0 =
   (
     e4
-      in0
+      (Obj.magic (in0))
   )
 
 (* io_return *)
@@ -1009,107 +1010,107 @@ and _idris_io_95_return e0 e1 e2 _idris_w =
 
 (* Prelude.Chars.isDigit *)
 and _idris_Prelude_46_Chars_46_isDigit e0 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__61__58_0
-      e0
-      '0'
-  ) with
+      (Obj.magic (e0))
+      (Obj.magic ('0'))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_Bool_46_False
   | C_idris_Prelude_46_Bool_46_True ->
-    Lazy.force ((
+    Lazy.force ((Obj.magic ((
       _idris_Prelude_46_Chars_46__123_isDigit0_125_
         e0
-    )))
+    )))))
 
 (* Prelude.Chars.{isDigit0} *)
 and _idris_Prelude_46_Chars_46__123_isDigit0_125_ e0 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__61__58_0
-      e0
-      '9'
+      (Obj.magic (e0))
+      (Obj.magic ('9'))
   )
 
 (* Main.main *)
 and _idris_Main_46_main =
   (
     _idris_io_95_bind
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_PE_95_printLn_95_32c49909
-          (
+          (Obj.magic ((
             _idris_Main_46_pythag
-              100
-          )
-      )
-      _idris_Main_46__123_main2_125_
+              (Obj.magic (100))
+          )))
+      )))
+      (Obj.magic (_idris_Main_46__123_main2_125_))
   )
 
 (* Main.{main2} *)
 and _idris_Main_46__123_main2_125_ in0 =
   (
     _idris_PE_95_printLn_39__95_cfef5baf
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_Prelude_46_List_46_sortBy
-          (raise (Idris_error "LNothing"))
-          _idris_Main_46__123_main1_125_
-          C_idris_Prelude_46_List_46__58__58_ ("foo", C_idris_Prelude_46_List_46__58__58_ ("bar", C_idris_Prelude_46_List_46__58__58_ ("baz", C_idris_Prelude_46_List_46_Nil)))
-      )
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (_idris_Main_46__123_main1_125_))
+          (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("foo")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("bar")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("baz")), (Obj.magic (C_idris_Prelude_46_List_46_Nil)))))))))))
+      )))
   )
 
 (* Main.{main1} *)
 and _idris_Main_46__123_main1_125_ in1 =
   (
     _idris_Main_46__123_main0_125_
-      in1
+      (Obj.magic (in1))
   )
 
 (* Main.{main0} *)
 and _idris_Main_46__123_main0_125_ in1 in2 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_String_58__33_compare_58_0
-      in1
-      in2
+      (Obj.magic (in1))
+      (Obj.magic (in2))
   )
 
 (* Prelude.List.mergeBy *)
 and _idris_Prelude_46_List_46_mergeBy e0 e1 e2 e3 =
-  (match e2 with
+  (match (Obj.magic (e2)) with
   | C_idris_Prelude_46_List_46_Nil ->
     e3
   | _ ->
-    (match e3 with
+    (match (Obj.magic (e3)) with
     | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-      (match e2 with
+      (match (Obj.magic (e2)) with
       | C_idris_Prelude_46_List_46__58__58_ (in2, in3) ->
-        (match (
+        (match (Obj.magic ((
           _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Eq_36_Ordering_58__33__61__61__58_0
-            (
+            (Obj.magic ((
               e1
-                in2
-                in0
-            )
-            C_idris_Prelude_46_Interfaces_46_LT
-        ) with
+                (Obj.magic (in2))
+                (Obj.magic (in0))
+            )))
+            (Obj.magic (C_idris_Prelude_46_Interfaces_46_LT))
+        ))) with
         | C_idris_Prelude_46_Bool_46_False ->
-          C_idris_Prelude_46_List_46__58__58_ (in0, (
+          C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic ((
             _idris_Prelude_46_List_46_mergeBy
-              (raise (Idris_error "LNothing"))
-              e1
-              C_idris_Prelude_46_List_46__58__58_ (in2, in3)
-              in1
-          ))
-        | C_idris_Prelude_46_Bool_46_True ->
-          C_idris_Prelude_46_List_46__58__58_ (in2, (
-            _idris_Prelude_46_List_46_mergeBy
-              (raise (Idris_error "LNothing"))
-              e1
-              in3
-              C_idris_Prelude_46_List_46__58__58_ (in0, in1)
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (e1))
+              (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in2)), (Obj.magic (in3)))))
+              (Obj.magic (in1))
           ))))
+        | C_idris_Prelude_46_Bool_46_True ->
+          C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in2)), (Obj.magic ((
+            _idris_Prelude_46_List_46_mergeBy
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (e1))
+              (Obj.magic (in3))
+              (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic (in1)))))
+          ))))))
     | C_idris_Prelude_46_List_46_Nil ->
       e2))
 
@@ -1119,7 +1120,7 @@ and _idris_mkForeignPrim =
 
 (* Prelude.Bool.not *)
 and _idris_Prelude_46_Bool_46_not e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_Bool_46_True
   | C_idris_Prelude_46_Bool_46_True ->
@@ -1127,7 +1128,7 @@ and _idris_Prelude_46_Bool_46_not e0 =
 
 (* Prelude.Show.precCon *)
 and _idris_Prelude_46_Show_46_precCon e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Show_46_App ->
     6
   | C_idris_Prelude_46_Show_46_Backtick ->
@@ -1147,24 +1148,24 @@ and _idris_Prelude_46_Show_46_precCon e0 =
 and _idris_Prelude_46_Show_46_primNumShow e0 e1 e2 e3 =
   let in0 = (
     e1
-      e3
+      (Obj.magic (e3))
   ) in
-    (match (match (
+    (match (Obj.magic ((match (Obj.magic ((
       _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__61__58_0
-        e2
-        C_idris_Prelude_46_Show_46_PrefixMinus
-    ) with
+        (Obj.magic (e2))
+        (Obj.magic (C_idris_Prelude_46_Show_46_PrefixMinus))
+    ))) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Bool_46_False
     | C_idris_Prelude_46_Bool_46_True ->
-      Lazy.force ((
+      Lazy.force ((Obj.magic ((
         _idris_Prelude_46_Show_46__123_primNumShow2_125_
           in0
           e0
           e1
           e2
           e3
-      ))) with
+      ))))))) with
     | C_idris_Prelude_46_Bool_46_False ->
       in0
     | C_idris_Prelude_46_Bool_46_True ->
@@ -1172,21 +1173,21 @@ and _idris_Prelude_46_Show_46_primNumShow e0 e1 e2 e3 =
 
 (* Prelude.Show.{primNumShow2} *)
 and _idris_Prelude_46_Show_46__123_primNumShow2_125_ in0 e0 e1 e2 e3 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Strings_46_strM
-      in0
-  ) with
+      (Obj.magic (in0))
+  ))) with
   | C_idris_Prelude_46_Strings_46_StrCons (in2, in3) ->
     (
       _idris_Prelude_46_Show_46__123_primNumShow1_125_
-        e0
-        e1
-        e2
-        e3
-        in0
-        in2
-        in3
-        in2
+        (Obj.magic (e0))
+        (Obj.magic (e1))
+        (Obj.magic (e2))
+        (Obj.magic (e3))
+        (Obj.magic (in0))
+        (Obj.magic (in2))
+        (Obj.magic (in3))
+        (Obj.magic (in2))
     )
   | C_idris_Prelude_46_Strings_46_StrNil ->
     C_idris_Prelude_46_Bool_46_False)
@@ -1197,7 +1198,7 @@ and _idris_Prelude_46_Show_46__123_primNumShow1_125_ e0 e1 e2 e3 in0 in2 in3 =
 
 (* Prelude.Show.{primNumShow0} *)
 and _idris_Prelude_46_Show_46__123_primNumShow0_125_ in1 =
-  (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
+  (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITChar)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -1371,7 +1372,7 @@ and _idris_prim_95__95_writeString op0 op1 =
 and _idris_prim_95_io_95_bind e0 e1 e2 e3 =
   (
     e3
-      e2
+      (Obj.magic (e2))
   )
 
 (* Prelude.Show.protectEsc *)
@@ -1382,98 +1383,98 @@ and _idris_Prelude_46_Show_46_protectEsc e0 e1 e2 =
 and _idris_Prelude_46_Applicative_46_pure e0 e1 e2 =
   (
     e2
-      e1
+      (Obj.magic (e1))
   )
 
 (* Main.pythag *)
 and _idris_Main_46_pythag e0 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0
-          1
-          e0
-      )
-      _idris_Main_46__123_pythag3_125_
+          (Obj.magic (1))
+          (Obj.magic (e0))
+      )))
+      (Obj.magic (_idris_Main_46__123_pythag3_125_))
   )
 
 (* Main.{pythag3} *)
 and _idris_Main_46__123_pythag3_125_ in0 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0
-          1
-          in0
-      )
-      (
+          (Obj.magic (1))
+          (Obj.magic (in0))
+      )))
+      (Obj.magic ((
         _idris_Main_46__123_pythag2_125_
-          in0
-      )
+          (Obj.magic (in0))
+      )))
   )
 
 (* Main.{pythag2} *)
 and _idris_Main_46__123_pythag2_125_ in0 in1 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((
         _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0
-          1
-          in1
-      )
-      (
+          (Obj.magic (1))
+          (Obj.magic (in1))
+      )))
+      (Obj.magic ((
         _idris_Main_46__123_pythag1_125_
-          in1
-          in0
-      )
+          (Obj.magic (in1))
+          (Obj.magic (in0))
+      )))
   )
 
 (* Main.{pythag1} *)
 and _idris_Main_46__123_pythag1_125_ in1 in0 in2 =
   (
     _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITNative)")) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITNative)")))) with
       | 0 ->
         C_idris_Prelude_46_Bool_46_False
       | _ ->
-        C_idris_Prelude_46_Bool_46_True) with
+        C_idris_Prelude_46_Bool_46_True))) with
       | C_idris_Prelude_46_Bool_46_False ->
         (
           _idris_PE_95_empty_95_4bb299b7
-            (raise (Idris_error "LNothing"))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
         )
       | C_idris_Prelude_46_Bool_46_True ->
         (
           _idris_Prelude_46_Applicative_46_pure
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Applicative_46_Alternative_35_Applicative_32_f_95_ae124204
-            C_idris_MkUnit
-        ))
-      (
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (_idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Applicative_46_Alternative_35_Applicative_32_f_95_ae124204))
+            (Obj.magic (C_idris_MkUnit))
+        ))))
+      (Obj.magic ((
         _idris_Main_46__123_pythag0_125_
-          in2
-          in1
-          in0
-      )
+          (Obj.magic (in2))
+          (Obj.magic (in1))
+          (Obj.magic (in0))
+      )))
   )
 
 (* Main.{pythag0} *)
 and _idris_Main_46__123_pythag0_125_ in2 in1 in0 in3 =
   (
     _idris_Prelude_46_Applicative_46_pure
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      _idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658
-      C_idris_Builtins_46_MkPair (in2, C_idris_Builtins_46_MkPair (in1, in0))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_PE_95__64__64_constructor_32_of_32_Prelude_46_Monad_46_Monad_35_Applicative_32_m_95_abd46658))
+      (Obj.magic (C_idris_Builtins_46_MkPair ((Obj.magic (in2)), (Obj.magic (C_idris_Builtins_46_MkPair ((Obj.magic (in1)), (Obj.magic (in0))))))))
   )
 
 (* really_believe_me *)
@@ -1484,18 +1485,18 @@ and _idris_really_95_believe_95_me e0 e1 e2 =
 and _idris_run_95__95_IO e0 e1 =
   (
     e1
-      (raise (Idris_error "LNothing"))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
   )
 
 (* Prelude.Show.show *)
 and _idris_Prelude_46_Show_46_show e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Show_46_Show_95_ictor (in0, in1) ->
     in0)
 
 (* Prelude.Show.showLitChar *)
 and _idris_Prelude_46_Show_46_showLitChar e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | '\x07' ->
     _idris_Prelude_46_Show_46__123_showLitChar0_125_
   | '\x08' ->
@@ -1513,74 +1514,74 @@ and _idris_Prelude_46_Show_46_showLitChar e0 =
   | '\x0e' ->
     (
       _idris_Prelude_46_Show_46_protectEsc
-        _idris_Prelude_46_Show_46__123_showLitChar7_125_
-        "\\SO"
+        (Obj.magic (_idris_Prelude_46_Show_46__123_showLitChar7_125_))
+        (Obj.magic ("\\SO"))
     )
   | '\\' ->
     _idris_Prelude_46_Show_46__123_showLitChar8_125_
   | '\x7f' ->
     _idris_Prelude_46_Show_46__123_showLitChar9_125_
   | _ ->
-    (match (
+    (match (Obj.magic ((
       _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "unsupported op: LSExt ITNative ITBig"))
-        (
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "unsupported op: LSExt ITNative ITBig"))))
+        (Obj.magic ((
           _idris_Prelude_46_Show_46_showLitChar_58_asciiTab_58_10
-            (raise (Idris_error "LNothing"))
-        )
-    ) with
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+        )))
+    ))) with
     | C_idris_Prelude_46_Maybe_46_Just (in10) ->
       (
         _idris_Prelude_46_Basics_46__46_
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((
             _idris_prim_95__95_strCons
-              '\\'
-          )
-          (
+              (Obj.magic ('\\'))
+          )))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46__123_showLitChar10_125_
-              in10
-          )
+              (Obj.magic (in10))
+          )))
       )
     | C_idris_Prelude_46_Maybe_46_Nothing ->
-      (match (match (
+      (match (Obj.magic ((match (Obj.magic ((
         _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0
-          e0
-          '\x7f'
-      ) with
+          (Obj.magic (e0))
+          (Obj.magic ('\x7f'))
+      ))) with
       | C_idris_Prelude_46_Interfaces_46_GT ->
         C_idris_Prelude_46_Bool_46_True
       | _ ->
-        C_idris_Prelude_46_Bool_46_False) with
+        C_idris_Prelude_46_Bool_46_False))) with
       | C_idris_Prelude_46_Bool_46_False ->
         (
           _idris_prim_95__95_strCons
-            e0
+            (Obj.magic (e0))
         )
       | C_idris_Prelude_46_Bool_46_True ->
         (
           _idris_Prelude_46_Basics_46__46_
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            (
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((
               _idris_prim_95__95_strCons
-                '\\'
-            )
-            (
+                (Obj.magic ('\\'))
+            )))
+            (Obj.magic ((
               _idris_Prelude_46_Show_46_protectEsc
-                _idris_Prelude_46_Chars_46_isDigit
-                (
+                (Obj.magic (_idris_Prelude_46_Chars_46_isDigit))
+                (Obj.magic ((
                   _idris_Prelude_46_Show_46_primNumShow
-                    (raise (Idris_error "LNothing"))
-                    _idris_prim_95__95_toStrInt
-                    C_idris_Prelude_46_Show_46_Open
-                    (raise (Idris_error "unsupported op: LChInt ITNative"))
-                )
-            )
+                    (Obj.magic ((raise (Idris_error "LNothing"))))
+                    (Obj.magic (_idris_prim_95__95_toStrInt))
+                    (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+                    (Obj.magic ((raise (Idris_error "unsupported op: LChInt ITNative"))))
+                )))
+            )))
         ))))
 
 (* Prelude.Show.{showLitChar10} *)
@@ -1597,7 +1598,7 @@ and _idris_Prelude_46_Show_46__123_showLitChar8_125_ in8 =
 
 (* Prelude.Show.{showLitChar7} *)
 and _idris_Prelude_46_Show_46__123_showLitChar7_125_ in7 =
-  (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
+  (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITChar)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -1633,40 +1634,40 @@ and _idris_Prelude_46_Show_46__123_showLitChar0_125_ in0 =
 
 (* Prelude.Show.showLitString *)
 and _idris_Prelude_46_Show_46_showLitString e0 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (match in0 with
+    (match (Obj.magic (in0)) with
     | '"' ->
       (
         _idris_Prelude_46_Basics_46__46_
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          _idris_Prelude_46_Show_46__123_showLitString0_125_
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (_idris_Prelude_46_Show_46__123_showLitString0_125_))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_showLitString
-              in1
-          )
+              (Obj.magic (in1))
+          )))
       )
     | _ ->
       (
         _idris_Prelude_46_Basics_46__46_
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_showLitChar
-              in0
-          )
-          (
+              (Obj.magic (in0))
+          )))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_showLitString
-              in1
-          )
+              (Obj.magic (in1))
+          )))
       ))
   | C_idris_Prelude_46_List_46_Nil ->
     (
       _idris_Prelude_46_Basics_46_id
-        (raise (Idris_error "LNothing"))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
     ))
 
 (* Prelude.Show.{showLitString0} *)
@@ -1675,7 +1676,7 @@ and _idris_Prelude_46_Show_46__123_showLitString0_125_ in2 =
 
 (* Prelude.Show.showParens *)
 and _idris_Prelude_46_Show_46_showParens e0 e1 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Bool_46_False ->
     e1
   | C_idris_Prelude_46_Bool_46_True ->
@@ -1683,123 +1684,123 @@ and _idris_Prelude_46_Show_46_showParens e0 e1 =
 
 (* Prelude.Show.showPrec *)
 and _idris_Prelude_46_Show_46_showPrec e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Show_46_Show_95_ictor (in0, in1) ->
     in1)
 
 (* Prelude.List.sortBy *)
 and _idris_Prelude_46_List_46_sortBy e0 e1 e2 =
-  (match e2 with
+  (match (Obj.magic (e2)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (match in1 with
+    (match (Obj.magic (in1)) with
     | C_idris_Prelude_46_List_46_Nil ->
-      C_idris_Prelude_46_List_46__58__58_ (in0, C_idris_Prelude_46_List_46_Nil)
+      C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic (C_idris_Prelude_46_List_46_Nil)))
     | _ ->
-      (match (
+      (match (Obj.magic ((
         _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          e2
-          e2
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (e2))
+          (Obj.magic (e2))
+          (Obj.magic ((
             _idris_Prelude_46_Basics_46_id
-              (raise (Idris_error "LNothing"))
-          )
-      ) with
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+          )))
+      ))) with
       | C_idris_Builtins_46_MkPair (in2, in3) ->
         (
           _idris_Prelude_46_List_46_mergeBy
-            (raise (Idris_error "LNothing"))
-            e1
-            (
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (e1))
+            (Obj.magic ((
               _idris_Prelude_46_List_46_sortBy
-                (raise (Idris_error "LNothing"))
-                e1
-                in2
-            )
-            (
+                (Obj.magic ((raise (Idris_error "LNothing"))))
+                (Obj.magic (e1))
+                (Obj.magic (in2))
+            )))
+            (Obj.magic ((
               _idris_Prelude_46_List_46_sortBy
-                (raise (Idris_error "LNothing"))
-                e1
-                in3
-            )
+                (Obj.magic ((raise (Idris_error "LNothing"))))
+                (Obj.magic (e1))
+                (Obj.magic (in3))
+            )))
         )))
   | C_idris_Prelude_46_List_46_Nil ->
     C_idris_Prelude_46_List_46_Nil
   | _ ->
-    (match (
+    (match (Obj.magic ((
       _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        e2
-        e2
-        (
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (e2))
+        (Obj.magic (e2))
+        (Obj.magic ((
           _idris_Prelude_46_Basics_46_id
-            (raise (Idris_error "LNothing"))
-        )
-    ) with
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+        )))
+    ))) with
     | C_idris_Builtins_46_MkPair (in4, in5) ->
       (
         _idris_Prelude_46_List_46_mergeBy
-          (raise (Idris_error "LNothing"))
-          e1
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (e1))
+          (Obj.magic ((
             _idris_Prelude_46_List_46_sortBy
-              (raise (Idris_error "LNothing"))
-              e1
-              in4
-          )
-          (
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (e1))
+              (Obj.magic (in4))
+          )))
+          (Obj.magic ((
             _idris_Prelude_46_List_46_sortBy
-              (raise (Idris_error "LNothing"))
-              e1
-              in5
-          )
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (e1))
+              (Obj.magic (in5))
+          )))
       )))
 
 (* Prelude.Strings.strM *)
 and _idris_Prelude_46_Strings_46_strM e0 =
-  (match (
+  (match (Obj.magic ((
     _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0
-      (match (match (raise (Idris_error "unsupported op: LStrEq")) with
+      (Obj.magic ((match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LStrEq")))) with
       | 0 ->
         C_idris_Prelude_46_Bool_46_False
       | _ ->
-        C_idris_Prelude_46_Bool_46_True) with
+        C_idris_Prelude_46_Bool_46_True))) with
       | C_idris_Prelude_46_Bool_46_False ->
         C_idris_Prelude_46_Bool_46_True
       | C_idris_Prelude_46_Bool_46_True ->
-        C_idris_Prelude_46_Bool_46_False)
-      C_idris_Prelude_46_Bool_46_True
-  ) with
+        C_idris_Prelude_46_Bool_46_False)))
+      (Obj.magic (C_idris_Prelude_46_Bool_46_True))
+  ))) with
   | C_idris_Prelude_46_Basics_46_No ->
     (
       _idris_really_95_believe_95_me
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        C_idris_Prelude_46_Strings_46_StrNil
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (C_idris_Prelude_46_Strings_46_StrNil))
     )
   | C_idris_Prelude_46_Basics_46_Yes ->
     (
       _idris_really_95_believe_95_me
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        C_idris_Prelude_46_Strings_46_StrCons ((raise (Idris_error "unsupported op: LStrHead")), (raise (Idris_error "unsupported op: LStrTail")))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (C_idris_Prelude_46_Strings_46_StrCons ((Obj.magic ((raise (Idris_error "unsupported op: LStrHead")))), (Obj.magic ((raise (Idris_error "unsupported op: LStrTail")))))))
     ))
 
 (* Prelude.Strings.unpack *)
 and _idris_Prelude_46_Strings_46_unpack e0 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Strings_46_strM
-      e0
-  ) with
+      (Obj.magic (e0))
+  ))) with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
-    C_idris_Prelude_46_List_46__58__58_ (in0, (
+    C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic ((
       _idris_Prelude_46_Strings_46_unpack
-        in1
-    ))
+        (Obj.magic (in1))
+    ))))
   | C_idris_Prelude_46_Strings_46_StrNil ->
     C_idris_Prelude_46_List_46_Nil)
 
@@ -1813,9 +1814,9 @@ and _idris_world e0 =
 
 (* Prelude.Bool.|| *)
 and _idris_Prelude_46_Bool_46__124__124_ e0 e1 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force (e1)
+    Lazy.force ((Obj.magic (e1)))
   | C_idris_Prelude_46_Bool_46_True ->
     C_idris_Prelude_46_Bool_46_True)
 
@@ -1845,51 +1846,51 @@ and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Eq
 
 (* Prelude.Prelude.Int implementation of Prelude.Enum, method enumFromTo, go *)
 and _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0 e0 e1 e2 e3 e4 =
-  (match e3 with
+  (match (Obj.magic (e3)) with
   | 0 ->
-    C_idris_Prelude_46_List_46__58__58_ (e4, e2)
+    C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (e4)), (Obj.magic (e2)))
   | _ ->
     let in0 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
       (
         _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          C_idris_Prelude_46_List_46__58__58_ (e4, e2)
-          in0
-          (raise (Idris_error "unsupported op: LMinus (ATInt ITNative)"))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (e4)), (Obj.magic (e2)))))
+          (Obj.magic (in0))
+          (Obj.magic ((raise (Idris_error "unsupported op: LMinus (ATInt ITNative)"))))
       ))
 
 (* Prelude.Show.Prelude.Show.List a implementation of Prelude.Show.Show, method show, show' *)
 and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32_a_58__33_show_58_0_58_show_39__58_0 e0 e1 e2 e3 e4 e5 =
-  (match e5 with
+  (match (Obj.magic (e5)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (match in1 with
+    (match (Obj.magic (in1)) with
     | C_idris_Prelude_46_List_46_Nil ->
       (raise (Idris_error "unsupported op: LStrConcat"))
     | _ ->
       (
         _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32_a_58__33_show_58_0_58_show_39__58_0
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          e3
-          (raise (Idris_error "unsupported op: LStrConcat"))
-          in1
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic (e3))
+          (Obj.magic ((raise (Idris_error "unsupported op: LStrConcat"))))
+          (Obj.magic (in1))
       ))
   | C_idris_Prelude_46_List_46_Nil ->
     e4)
 
 (* Decidable.Equality.Decidable.Equality.Bool implementation of Decidable.Equality.DecEq, method decEq *)
 and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Bool_46_False ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Basics_46_Yes
     | C_idris_Prelude_46_Bool_46_True ->
       C_idris_Prelude_46_Basics_46_No)
   | C_idris_Prelude_46_Bool_46_True ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Basics_46_No
     | C_idris_Prelude_46_Bool_46_True ->
@@ -1897,66 +1898,66 @@ and _idris_Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Eq
 
 (* Prelude.Prelude.Int implementation of Prelude.Enum, method enumFromTo *)
 and _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0 e0 e1 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__61__58_0
-      e0
-      e1
-  ) with
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
     C_idris_Prelude_46_List_46_Nil
   | C_idris_Prelude_46_Bool_46_True ->
     (
       _idris_Prelude_46_Prelude_46__64_Prelude_46_Enum_36_Int_58__33_enumFromTo_58_0_58_go_58_0
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        C_idris_Prelude_46_List_46_Nil
-        (raise (Idris_error "unsupported op: LSExt ITNative ITBig"))
-        e1
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (C_idris_Prelude_46_List_46_Nil))
+        (Obj.magic ((raise (Idris_error "unsupported op: LSExt ITNative ITBig"))))
+        (Obj.magic (e1))
     ))
 
 (* Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Eq, method == *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | 0 ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_True
     | _ ->
       C_idris_Prelude_46_Bool_46_False)
   | _ ->
     let in0 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
-      (match e0 with
+      (match (Obj.magic (e0)) with
       | 0 ->
         C_idris_Prelude_46_Bool_46_False
       | _ ->
         let in1 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
           (
             _idris_Prelude_46_Interfaces_46__61__61_
-              (raise (Idris_error "LNothing"))
-              _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat
-              in1
-              in0
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (_idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat))
+              (Obj.magic (in1))
+              (Obj.magic (in0))
           ))
   | _ ->
     C_idris_Prelude_46_Bool_46_False)
 
 (* Prelude.Interfaces.Prelude.Interfaces.Ordering implementation of Prelude.Interfaces.Eq, method == *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Eq_36_Ordering_58__33__61__61__58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Interfaces_46_EQ ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Interfaces_46_EQ ->
       C_idris_Prelude_46_Bool_46_True
     | _ ->
       C_idris_Prelude_46_Bool_46_False)
   | C_idris_Prelude_46_Interfaces_46_GT ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Interfaces_46_GT ->
       C_idris_Prelude_46_Bool_46_True
     | _ ->
       C_idris_Prelude_46_Bool_46_False)
   | C_idris_Prelude_46_Interfaces_46_LT ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Interfaces_46_LT ->
       C_idris_Prelude_46_Bool_46_True
     | _ ->
@@ -1966,23 +1967,23 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Eq, method == *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Eq_36_Prec_58__33__61__61__58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Show_46_User (in0) ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Show_46_User (in1) ->
       (
         _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0
-          in1
-          in0
+          (Obj.magic (in1))
+          (Obj.magic (in0))
       )
     | _ ->
-      (match (raise (Idris_error "unsupported op: LEq (ATInt ITBig)")) with
+      (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITBig)")))) with
       | 0 ->
         C_idris_Prelude_46_Bool_46_False
       | _ ->
         C_idris_Prelude_46_Bool_46_True))
   | _ ->
-    (match (raise (Idris_error "unsupported op: LEq (ATInt ITBig)")) with
+    (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITBig)")))) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
@@ -1990,21 +1991,21 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces
 
 (* Prelude.Foldable.Prelude.List.List implementation of Prelude.Foldable.Foldable, method foldr *)
 and _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0 e0 e1 e2 e3 e4 =
-  (match e4 with
+  (match (Obj.magic (e4)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
     (
       e2
-        in0
-        (
+        (Obj.magic (in0))
+        (Obj.magic ((
           _idris_Prelude_46_Foldable_46_foldr
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            _idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List
-            e2
-            e3
-            in1
-        )
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (_idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List))
+            (Obj.magic (e2))
+            (Obj.magic (e3))
+            (Obj.magic (in1))
+        )))
     )
   | C_idris_Prelude_46_List_46_Nil ->
     e3)
@@ -2013,33 +2014,33 @@ and _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_
 and _idris_Prelude_46_Monad_46_Prelude_46__64_Prelude_46_Monad_46_Monad_36_List_58__33__62__62__61__58_0 e0 e1 e2 e3 =
   (
     _idris_PE_95_concatMap_95_994c4fbe
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      e3
-      e2
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (e3))
+      (Obj.magic (e2))
   )
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method <= *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__61__58_0 e0 e1 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46__60_
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char
-      e0
-      e1
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char))
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force ((
+    Lazy.force ((Obj.magic ((
       _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_
         e0
         e1
-    ))
+    ))))
   | C_idris_Prelude_46_Bool_46_True ->
     C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method <=_lam0} *)
 and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
-  (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
+  (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITChar)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -2047,25 +2048,25 @@ and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implem
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method >= *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__61__58_0 e0 e1 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46__62_
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char
-      e0
-      e1
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char))
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force ((
+    Lazy.force ((Obj.magic ((
       _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_
         e0
         e1
-    ))
+    ))))
   | C_idris_Prelude_46_Bool_46_True ->
     C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method >=_lam0} *)
 and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
-  (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
+  (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITChar)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -2073,17 +2074,17 @@ and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Char_32_implem
 
 (* Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0 e0 e1 =
-  (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITChar)")) with
+  (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITChar)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True) with
+    C_idris_Prelude_46_Bool_46_True))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    (match (match (raise (Idris_error "unsupported op: LSLt (ATInt ITChar)")) with
+    (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LSLt (ATInt ITChar)")))) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
-      C_idris_Prelude_46_Bool_46_True) with
+      C_idris_Prelude_46_Bool_46_True))) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Interfaces_46_GT
     | C_idris_Prelude_46_Bool_46_True ->
@@ -2093,25 +2094,25 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
 
 (* Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method <= *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__61__58_0 e0 e1 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46__60_
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int
-      e0
-      e1
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int))
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force ((
+    Lazy.force ((Obj.magic ((
       _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_
         e0
         e1
-    ))
+    ))))
   | C_idris_Prelude_46_Bool_46_True ->
     C_idris_Prelude_46_Bool_46_True)
 
 (* Prelude.Interfaces.{Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method <=_lam0} *)
 and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__60__61__95_lam0_125_ e0 e1 =
-  (match (raise (Idris_error "unsupported op: LEq (ATInt ITNative)")) with
+  (match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITNative)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
@@ -2119,17 +2120,17 @@ and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Interfaces_46_Int_32_impleme
 
 (* Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33_compare_58_0 e0 e1 =
-  (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITNative)")) with
+  (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITNative)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True) with
+    C_idris_Prelude_46_Bool_46_True))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    (match (match (raise (Idris_error "unsupported op: LSLt (ATInt ITNative)")) with
+    (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LSLt (ATInt ITNative)")))) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
-      C_idris_Prelude_46_Bool_46_True) with
+      C_idris_Prelude_46_Bool_46_True))) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Interfaces_46_GT
     | C_idris_Prelude_46_Bool_46_True ->
@@ -2139,17 +2140,17 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
 
 (* Prelude.Interfaces.Prelude.Interfaces.Integer implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Integer_58__33_compare_58_0 e0 e1 =
-  (match (match (raise (Idris_error "unsupported op: LEq (ATInt ITBig)")) with
+  (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LEq (ATInt ITBig)")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True) with
+    C_idris_Prelude_46_Bool_46_True))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    (match (match (raise (Idris_error "unsupported op: LSLt (ATInt ITBig)")) with
+    (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LSLt (ATInt ITBig)")))) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
-      C_idris_Prelude_46_Bool_46_True) with
+      C_idris_Prelude_46_Bool_46_True))) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Interfaces_46_GT
     | C_idris_Prelude_46_Bool_46_True ->
@@ -2159,9 +2160,9 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
 
 (* Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | 0 ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | 0 ->
       C_idris_Prelude_46_Interfaces_46_EQ
     | _ ->
@@ -2169,34 +2170,34 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_
         C_idris_Prelude_46_Interfaces_46_GT)
   | _ ->
     let in1 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
-      (match e0 with
+      (match (Obj.magic (e0)) with
       | 0 ->
         C_idris_Prelude_46_Interfaces_46_LT
       | _ ->
         let in2 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
           (
             _idris_Prelude_46_Interfaces_46_compare
-              (raise (Idris_error "LNothing"))
-              _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat
-              in2
-              in1
+              (Obj.magic ((raise (Idris_error "LNothing"))))
+              (Obj.magic (_idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat))
+              (Obj.magic (in2))
+              (Obj.magic (in1))
           )))
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method >= *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__61__58_0 e0 e1 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46__62_
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec
-      e0
-      e1
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec))
+      (Obj.magic (e0))
+      (Obj.magic (e1))
+  ))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    Lazy.force ((
+    Lazy.force ((Obj.magic ((
       _idris_Prelude_46_Interfaces_46__123_Prelude_46_Show_46_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_
         e0
         e1
-    ))
+    ))))
   | C_idris_Prelude_46_Bool_46_True ->
     C_idris_Prelude_46_Bool_46_True)
 
@@ -2204,59 +2205,59 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces
 and _idris_Prelude_46_Interfaces_46__123_Prelude_46_Show_46_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_44__32_method_32__62__61__95_lam0_125_ e0 e1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Eq_36_Prec_58__33__61__61__58_0
-      e0
-      e1
+      (Obj.magic (e0))
+      (Obj.magic (e1))
   )
 
 (* Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33_compare_58_0 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Show_46_User (in0) ->
-    (match e0 with
+    (match (Obj.magic (e0)) with
     | C_idris_Prelude_46_Show_46_User (in1) ->
       (
         _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0
-          in1
-          in0
+          (Obj.magic (in1))
+          (Obj.magic (in0))
       )
     | _ ->
       (
         _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Integer_58__33_compare_58_0
-          (
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_precCon
-              e0
-          )
-          (
+              (Obj.magic (e0))
+          )))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_precCon
-              e1
-          )
+              (Obj.magic (e1))
+          )))
       ))
   | _ ->
     (
       _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Integer_58__33_compare_58_0
-        (
+        (Obj.magic ((
           _idris_Prelude_46_Show_46_precCon
-            e0
-        )
-        (
+            (Obj.magic (e0))
+        )))
+        (Obj.magic ((
           _idris_Prelude_46_Show_46_precCon
-            e1
-        )
+            (Obj.magic (e1))
+        )))
     ))
 
 (* Prelude.Interfaces.Prelude.Interfaces.String implementation of Prelude.Interfaces.Ord, method compare *)
 and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_String_58__33_compare_58_0 e0 e1 =
-  (match (match (raise (Idris_error "unsupported op: LStrEq")) with
+  (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LStrEq")))) with
   | 0 ->
     C_idris_Prelude_46_Bool_46_False
   | _ ->
-    C_idris_Prelude_46_Bool_46_True) with
+    C_idris_Prelude_46_Bool_46_True))) with
   | C_idris_Prelude_46_Bool_46_False ->
-    (match (match (raise (Idris_error "unsupported op: LStrLt")) with
+    (match (Obj.magic ((match (Obj.magic ((raise (Idris_error "unsupported op: LStrLt")))) with
     | 0 ->
       C_idris_Prelude_46_Bool_46_False
     | _ ->
-      C_idris_Prelude_46_Bool_46_True) with
+      C_idris_Prelude_46_Bool_46_True))) with
     | C_idris_Prelude_46_Bool_46_False ->
       C_idris_Prelude_46_Interfaces_46_GT
     | C_idris_Prelude_46_Bool_46_True ->
@@ -2266,7 +2267,7 @@ and _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Inte
 
 (* Prelude.Show.Prelude.Show.(a, b) implementation of Prelude.Show.Show, method show *)
 and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36__40_a_44__32_b_41__58__33_show_58_0 e0 e1 e2 e3 e4 e5 e6 =
-  (match e6 with
+  (match (Obj.magic (e6)) with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
     (raise (Idris_error "unsupported op: LStrConcat")))
 
@@ -2276,109 +2277,109 @@ and _idris_Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_
 
 (* Prelude.List.sortBy, splitRec *)
 and _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2 e0 e1 e2 e3 e4 e5 =
-  (match e4 with
+  (match (Obj.magic (e4)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (match e3 with
+    (match (Obj.magic (e3)) with
     | C_idris_Prelude_46_List_46__58__58_ (in2, in3) ->
-      (match in3 with
+      (match (Obj.magic (in3)) with
       | C_idris_Prelude_46_List_46__58__58_ (in4, in5) ->
         (
           _idris_Prelude_46_List_46_sortBy_58_splitRec_58_2
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            (raise (Idris_error "LNothing"))
-            in5
-            in1
-            (
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (in5))
+            (Obj.magic (in1))
+            (Obj.magic ((
               _idris_Prelude_46_Basics_46__46_
-                (raise (Idris_error "LNothing"))
-                (raise (Idris_error "LNothing"))
-                (raise (Idris_error "LNothing"))
-                e5
-                (
+                (Obj.magic ((raise (Idris_error "LNothing"))))
+                (Obj.magic ((raise (Idris_error "LNothing"))))
+                (Obj.magic ((raise (Idris_error "LNothing"))))
+                (Obj.magic (e5))
+                (Obj.magic ((
                   _idris__123_Prelude_46_List_46_sortBy_44__32_splitRec_95_lam0_125_
-                    in0
-                )
-            )
+                    (Obj.magic (in0))
+                )))
+            )))
         )
       | _ ->
-        C_idris_Builtins_46_MkPair ((
+        C_idris_Builtins_46_MkPair ((Obj.magic ((
           e5
-            C_idris_Prelude_46_List_46_Nil
-        ), e4))
+            (Obj.magic (C_idris_Prelude_46_List_46_Nil))
+        ))), (Obj.magic (e4))))
     | _ ->
-      C_idris_Builtins_46_MkPair ((
+      C_idris_Builtins_46_MkPair ((Obj.magic ((
         e5
-          C_idris_Prelude_46_List_46_Nil
-      ), e4))
+          (Obj.magic (C_idris_Prelude_46_List_46_Nil))
+      ))), (Obj.magic (e4))))
   | _ ->
-    C_idris_Builtins_46_MkPair ((
+    C_idris_Builtins_46_MkPair ((Obj.magic ((
       e5
-        C_idris_Prelude_46_List_46_Nil
-    ), e4))
+        (Obj.magic (C_idris_Prelude_46_List_46_Nil))
+    ))), (Obj.magic (e4))))
 
 (* {Prelude.List.sortBy, splitRec_lam0} *)
 and _idris__123_Prelude_46_List_46_sortBy_44__32_splitRec_95_lam0_125_ in0 in6 =
-  C_idris_Prelude_46_List_46__58__58_ (in0, in6)
+  C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic (in6)))
 
 (* Prelude.Show.showLitChar, asciiTab *)
 and _idris_Prelude_46_Show_46_showLitChar_58_asciiTab_58_10 e0 =
-  C_idris_Prelude_46_List_46__58__58_ ("NUL", C_idris_Prelude_46_List_46__58__58_ ("SOH", C_idris_Prelude_46_List_46__58__58_ ("STX", C_idris_Prelude_46_List_46__58__58_ ("ETX", C_idris_Prelude_46_List_46__58__58_ ("EOT", C_idris_Prelude_46_List_46__58__58_ ("ENQ", C_idris_Prelude_46_List_46__58__58_ ("ACK", C_idris_Prelude_46_List_46__58__58_ ("BEL", C_idris_Prelude_46_List_46__58__58_ ("BS", C_idris_Prelude_46_List_46__58__58_ ("HT", C_idris_Prelude_46_List_46__58__58_ ("LF", C_idris_Prelude_46_List_46__58__58_ ("VT", C_idris_Prelude_46_List_46__58__58_ ("FF", C_idris_Prelude_46_List_46__58__58_ ("CR", C_idris_Prelude_46_List_46__58__58_ ("SO", C_idris_Prelude_46_List_46__58__58_ ("SI", C_idris_Prelude_46_List_46__58__58_ ("DLE", C_idris_Prelude_46_List_46__58__58_ ("DC1", C_idris_Prelude_46_List_46__58__58_ ("DC2", C_idris_Prelude_46_List_46__58__58_ ("DC3", C_idris_Prelude_46_List_46__58__58_ ("DC4", C_idris_Prelude_46_List_46__58__58_ ("NAK", C_idris_Prelude_46_List_46__58__58_ ("SYN", C_idris_Prelude_46_List_46__58__58_ ("ETB", C_idris_Prelude_46_List_46__58__58_ ("CAN", C_idris_Prelude_46_List_46__58__58_ ("EM", C_idris_Prelude_46_List_46__58__58_ ("SUB", C_idris_Prelude_46_List_46__58__58_ ("ESC", C_idris_Prelude_46_List_46__58__58_ ("FS", C_idris_Prelude_46_List_46__58__58_ ("GS", C_idris_Prelude_46_List_46__58__58_ ("RS", C_idris_Prelude_46_List_46__58__58_ ("US", C_idris_Prelude_46_List_46_Nil))))))))))))))))))))))))))))))))
+  C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("NUL")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("SOH")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("STX")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("ETX")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("EOT")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("ENQ")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("ACK")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("BEL")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("BS")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("HT")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("LF")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("VT")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("FF")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("CR")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("SO")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("SI")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("DLE")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("DC1")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("DC2")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("DC3")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("DC4")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("NAK")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("SYN")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("ETB")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("CAN")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("EM")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("SUB")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("ESC")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("FS")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("GS")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("RS")), (Obj.magic (C_idris_Prelude_46_List_46__58__58_ ((Obj.magic ("US")), (Obj.magic (C_idris_Prelude_46_List_46_Nil))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
 
 (* Prelude.Show.showLitChar, getAt *)
 and _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10 e0 e1 e2 =
-  (match e2 with
+  (match (Obj.magic (e2)) with
   | C_idris_Prelude_46_List_46__58__58_ (in0, in1) ->
-    (match e1 with
+    (match (Obj.magic (e1)) with
     | 0 ->
-      C_idris_Prelude_46_Maybe_46_Just (in0)
+      C_idris_Prelude_46_Maybe_46_Just ((Obj.magic (in0)))
     | _ ->
       let in2 = (raise (Idris_error "unsupported op: LMinus (ATInt ITBig)")) in
         (
           _idris_Prelude_46_Show_46_showLitChar_58_getAt_58_10
-            (raise (Idris_error "LNothing"))
-            in2
-            in1
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (in2))
+            (Obj.magic (in1))
         ))
   | C_idris_Prelude_46_List_46_Nil ->
     C_idris_Prelude_46_Maybe_46_Nothing)
 
 (* with block in Prelude.Strings.strM *)
 and _idris__95_Prelude_46_Strings_46_strM_95_with_95_21 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Basics_46_No ->
     (
       _idris_really_95_believe_95_me
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        C_idris_Prelude_46_Strings_46_StrNil
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (C_idris_Prelude_46_Strings_46_StrNil))
     )
   | C_idris_Prelude_46_Basics_46_Yes ->
     (
       _idris_really_95_believe_95_me
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        C_idris_Prelude_46_Strings_46_StrCons ((raise (Idris_error "unsupported op: LStrHead")), (raise (Idris_error "unsupported op: LStrTail")))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (C_idris_Prelude_46_Strings_46_StrCons ((Obj.magic ((raise (Idris_error "unsupported op: LStrHead")))), (Obj.magic ((raise (Idris_error "unsupported op: LStrTail")))))))
     ))
 
 (* with block in Prelude.Strings.unpack *)
 and _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24 e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
-    C_idris_Prelude_46_List_46__58__58_ (in0, (
+    C_idris_Prelude_46_List_46__58__58_ ((Obj.magic (in0)), (Obj.magic ((
       _idris__95_Prelude_46_Strings_46_unpack_95_with_95_24
-        (raise (Idris_error "LNothing"))
-        (
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((
           _idris_Prelude_46_Strings_46_strM
-            in1
-        )
-    ))
+            (Obj.magic (in1))
+        )))
+    ))))
   | C_idris_Prelude_46_Strings_46_StrNil ->
     C_idris_Prelude_46_List_46_Nil)
 
 (* with block in Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method < *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__60__58_0_95_with_95_25 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2386,7 +2387,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interf
 
 (* with block in Prelude.Interfaces.Prelude.Show.Prec implementation of Prelude.Interfaces.Ord, method > *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33__62__58_0_95_with_95_27 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2394,18 +2395,18 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interf
 
 (* with block in Prelude.Show.firstCharIs *)
 and _idris__95_Prelude_46_Show_46_firstCharIs_95_with_95_44 e0 e1 e2 =
-  (match e2 with
+  (match (Obj.magic (e2)) with
   | C_idris_Prelude_46_Strings_46_StrCons (in0, in1) ->
     (
       e0
-        in0
+        (Obj.magic (in0))
     )
   | C_idris_Prelude_46_Strings_46_StrNil ->
     C_idris_Prelude_46_Bool_46_False)
 
 (* with block in Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method < *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__60__58_0_95_with_95_82 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2413,7 +2414,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfa
 
 (* with block in Prelude.Interfaces.Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord, method > *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33__62__58_0_95_with_95_84 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2421,7 +2422,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfa
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method < *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__60__58_0_95_with_95_96 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2429,7 +2430,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord, method > *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33__62__58_0_95_with_95_98 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2437,7 +2438,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method < *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__60__58_0_95_with_95_129 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2445,7 +2446,7 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_
 
 (* with block in Prelude.Interfaces.Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord, method > *)
 and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33__62__58_0_95_with_95_131 e0 e1 e2 =
-  (match e0 with
+  (match (Obj.magic (e0)) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2455,41 +2456,41 @@ and _idris__95_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_
 and _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat meth0 meth1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Eq_36_Nat_58__33__61__61__58_0
-      meth0
-      meth1
+      (Obj.magic (meth0))
+      (Obj.magic (meth1))
   )
 
 (* Prelude.List.List implementation of Prelude.Foldable.Foldable *)
 and _idris_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List meth0 meth1 meth2 meth3 meth4 =
   (
     _idris_Prelude_46_Foldable_46_Prelude_46_List_46__64_Prelude_46_Foldable_46_Foldable_36_List_58__33_foldr_58_0
-      (raise (Idris_error "LNothing"))
-      (raise (Idris_error "LNothing"))
-      meth2
-      meth3
-      meth4
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (meth2))
+      (Obj.magic (meth3))
+      (Obj.magic (meth4))
   )
 
 (* Prelude.Interfaces.Char implementation of Prelude.Interfaces.Ord *)
 and _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char =
-  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor ((Obj.magic (_idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_)), (Obj.magic (_idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_)), (Obj.magic (_idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)))
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam5} *)
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
-      in4
+      (Obj.magic (in4))
   )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam4} *)
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char
-      in4
-      in5
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char))
+      (Obj.magic (in4))
+      (Obj.magic (in5))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2499,18 +2500,18 @@ and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
-      in2
+      (Obj.magic (in2))
   )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam2} *)
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char
-      in2
-      in3
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char))
+      (Obj.magic (in2))
+      (Obj.magic (in3))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2520,37 +2521,37 @@ and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
-      in0
+      (Obj.magic (in0))
   )
 
 (* Prelude.Interfaces.{Char implementation of Prelude.Interfaces.Ord_lam0} *)
 and _idris_Prelude_46_Interfaces_46__123_Char_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0
-      in0
-      in1
+      (Obj.magic (in0))
+      (Obj.magic (in1))
   )
 
 (* Prelude.Interfaces.Int implementation of Prelude.Interfaces.Ord *)
 and _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int =
-  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor ((Obj.magic (_idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_)), (Obj.magic (_idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_)), (Obj.magic (_idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)))
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam5} *)
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
-      in4
+      (Obj.magic (in4))
   )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam4} *)
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int
-      in4
-      in5
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int))
+      (Obj.magic (in4))
+      (Obj.magic (in5))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2560,18 +2561,18 @@ and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
-      in2
+      (Obj.magic (in2))
   )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam2} *)
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int
-      in2
-      in3
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int))
+      (Obj.magic (in2))
+      (Obj.magic (in3))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2581,37 +2582,37 @@ and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
-      in0
+      (Obj.magic (in0))
   )
 
 (* Prelude.Interfaces.{Int implementation of Prelude.Interfaces.Ord_lam0} *)
 and _idris_Prelude_46_Interfaces_46__123_Int_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Int_58__33_compare_58_0
-      in0
-      in1
+      (Obj.magic (in0))
+      (Obj.magic (in1))
   )
 
 (* Prelude.Nat.Nat implementation of Prelude.Interfaces.Ord *)
 and _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat =
-  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor ((Obj.magic (_idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_)), (Obj.magic (_idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_)), (Obj.magic (_idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)))
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam5} *)
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
-      in4
+      (Obj.magic (in4))
   )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam4} *)
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat
-      in4
-      in5
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat))
+      (Obj.magic (in4))
+      (Obj.magic (in5))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2621,18 +2622,18 @@ and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Inte
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
-      in2
+      (Obj.magic (in2))
   )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam2} *)
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat
-      in2
-      in3
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat))
+      (Obj.magic (in2))
+      (Obj.magic (in3))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2642,37 +2643,37 @@ and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Inte
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
-      in0
+      (Obj.magic (in0))
   )
 
 (* Prelude.Nat.{Nat implementation of Prelude.Interfaces.Ord_lam0} *)
 and _idris_Prelude_46_Nat_46__123_Nat_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Nat_46__64_Prelude_46_Interfaces_46_Ord_36_Nat_58__33_compare_58_0
-      in0
-      in1
+      (Obj.magic (in0))
+      (Obj.magic (in1))
   )
 
 (* Prelude.Show.Prec implementation of Prelude.Interfaces.Ord *)
 and _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec =
-  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor (_idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_, _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_, _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)
+  C_idris_Prelude_46_Interfaces_46_Ord_95_ictor ((Obj.magic (_idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_)), (Obj.magic (_idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_)), (Obj.magic (_idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_)))
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam5} *)
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam5_125_ in4 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_
-      in4
+      (Obj.magic (in4))
   )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam4} *)
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam4_125_ in4 in5 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec
-      in4
-      in5
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec))
+      (Obj.magic (in4))
+      (Obj.magic (in5))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_GT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2682,18 +2683,18 @@ and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_In
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam3_125_ in2 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_
-      in2
+      (Obj.magic (in2))
   )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam2} *)
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam2_125_ in2 in3 =
-  (match (
+  (match (Obj.magic ((
     _idris_Prelude_46_Interfaces_46_compare
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec
-      in2
-      in3
-  ) with
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec))
+      (Obj.magic (in2))
+      (Obj.magic (in3))
+  ))) with
   | C_idris_Prelude_46_Interfaces_46_LT ->
     C_idris_Prelude_46_Bool_46_True
   | _ ->
@@ -2703,124 +2704,124 @@ and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_In
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam1_125_ in0 =
   (
     _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_
-      in0
+      (Obj.magic (in0))
   )
 
 (* Prelude.Show.{Prec implementation of Prelude.Interfaces.Ord_lam0} *)
 and _idris_Prelude_46_Show_46__123_Prec_32_implementation_32_of_32_Prelude_46_Interfaces_46_Ord_95_lam0_125_ in0 in1 =
   (
     _idris_Prelude_46_Interfaces_46_Prelude_46_Show_46__64_Prelude_46_Interfaces_46_Ord_36_Prec_58__33_compare_58_0
-      in0
-      in1
+      (Obj.magic (in0))
+      (Obj.magic (in1))
   )
 
 (* Prelude.Show.Int implementation of Prelude.Show.Show *)
 and _idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int =
-  C_idris_Prelude_46_Show_46_Show_95_ictor (_idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_, _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_)
+  C_idris_Prelude_46_Show_46_Show_95_ictor ((Obj.magic (_idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_)), (Obj.magic (_idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_)))
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam2} *)
 and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam2_125_ in1 =
   (
     _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam1_125_
-      in1
+      (Obj.magic (in1))
   )
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam1} *)
 and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam1_125_ in1 in2 =
   (
     _idris_Prelude_46_Show_46_primNumShow
-      (raise (Idris_error "LNothing"))
-      _idris_prim_95__95_toStrInt
-      in1
-      in2
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_prim_95__95_toStrInt))
+      (Obj.magic (in1))
+      (Obj.magic (in2))
   )
 
 (* Prelude.Show.{Int implementation of Prelude.Show.Show_lam0} *)
 and _idris_Prelude_46_Show_46__123_Int_32_implementation_32_of_32_Prelude_46_Show_46_Show_95_lam0_125_ in0 =
   (
     _idris_Prelude_46_Show_46_showPrec
-      (raise (Idris_error "LNothing"))
-      _idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int
-      C_idris_Prelude_46_Show_46_Open
-      in0
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+      (Obj.magic (_idris_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_Int))
+      (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+      (Obj.magic (in0))
   )
 
 (* Prelude.List.case block in sortBy at ./Prelude/List.idr:779:22 *)
 and _idris_Prelude_46_List_46_sortBy_95__95__95__95__95_Prelude_95__95_List_95__95_idr_95_779_95_22_95_case e0 e1 e2 e3 =
-  (match e3 with
+  (match (Obj.magic (e3)) with
   | C_idris_Builtins_46_MkPair (in0, in1) ->
     (
       _idris_Prelude_46_List_46_mergeBy
-        (raise (Idris_error "LNothing"))
-        e1
-        (
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic (e1))
+        (Obj.magic ((
           _idris_Prelude_46_List_46_sortBy
-            (raise (Idris_error "LNothing"))
-            e1
-            in0
-        )
-        (
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (e1))
+            (Obj.magic (in0))
+        )))
+        (Obj.magic ((
           _idris_Prelude_46_List_46_sortBy
-            (raise (Idris_error "LNothing"))
-            e1
-            in1
-        )
+            (Obj.magic ((raise (Idris_error "LNothing"))))
+            (Obj.magic (e1))
+            (Obj.magic (in1))
+        )))
     ))
 
 (* Prelude.Show.case block in showLitChar at ./Prelude/Show.idr:128:27 *)
 and _idris_Prelude_46_Show_46_showLitChar_95__95__95__95__95_Prelude_95__95_Show_95__95_idr_95_128_95_27_95_case e0 e1 =
-  (match e1 with
+  (match (Obj.magic (e1)) with
   | C_idris_Prelude_46_Maybe_46_Just (in0) ->
     (
       _idris_Prelude_46_Basics_46__46_
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        (raise (Idris_error "LNothing"))
-        (
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((raise (Idris_error "LNothing"))))
+        (Obj.magic ((
           _idris_prim_95__95_strCons
-            '\\'
-        )
-        (
+            (Obj.magic ('\\'))
+        )))
+        (Obj.magic ((
           _idris_Prelude_46_Show_46__123_case_32_block_32_in_32_showLitChar_32_at_32__46__47_Prelude_47_Show_46_idr_58_128_58_27_95_lam0_125_
-            in0
-        )
+            (Obj.magic (in0))
+        )))
     )
   | C_idris_Prelude_46_Maybe_46_Nothing ->
-    (match (match (
+    (match (Obj.magic ((match (Obj.magic ((
       _idris_Prelude_46_Interfaces_46_Prelude_46_Interfaces_46__64_Prelude_46_Interfaces_46_Ord_36_Char_58__33_compare_58_0
-        e0
-        '\x7f'
-    ) with
+        (Obj.magic (e0))
+        (Obj.magic ('\x7f'))
+    ))) with
     | C_idris_Prelude_46_Interfaces_46_GT ->
       C_idris_Prelude_46_Bool_46_True
     | _ ->
-      C_idris_Prelude_46_Bool_46_False) with
+      C_idris_Prelude_46_Bool_46_False))) with
     | C_idris_Prelude_46_Bool_46_False ->
       (
         _idris_prim_95__95_strCons
-          e0
+          (Obj.magic (e0))
       )
     | C_idris_Prelude_46_Bool_46_True ->
       (
         _idris_Prelude_46_Basics_46__46_
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (raise (Idris_error "LNothing"))
-          (
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((raise (Idris_error "LNothing"))))
+          (Obj.magic ((
             _idris_prim_95__95_strCons
-              '\\'
-          )
-          (
+              (Obj.magic ('\\'))
+          )))
+          (Obj.magic ((
             _idris_Prelude_46_Show_46_protectEsc
-              _idris_Prelude_46_Chars_46_isDigit
-              (
+              (Obj.magic (_idris_Prelude_46_Chars_46_isDigit))
+              (Obj.magic ((
                 _idris_Prelude_46_Show_46_primNumShow
-                  (raise (Idris_error "LNothing"))
-                  _idris_prim_95__95_toStrInt
-                  C_idris_Prelude_46_Show_46_Open
-                  (raise (Idris_error "unsupported op: LChInt ITNative"))
-              )
-          )
+                  (Obj.magic ((raise (Idris_error "LNothing"))))
+                  (Obj.magic (_idris_prim_95__95_toStrInt))
+                  (Obj.magic (C_idris_Prelude_46_Show_46_Open))
+                  (Obj.magic ((raise (Idris_error "unsupported op: LChInt ITNative"))))
+              )))
+          )))
       )))
 
 (* Prelude.Show.{case block in showLitChar at ./Prelude/Show.idr:128:27_lam0} *)
@@ -2831,7 +2832,7 @@ and _idris_Prelude_46_Show_46__123_case_32_block_32_in_32_showLitChar_32_at_32__
 and _idris_io_95_bind_95_IO_95__95_idr_95_107_95_34_95_case e0 e1 e2 e3 e4 e5 e6 e7 =
   (
     e7
-      e5
+      (Obj.magic (e5))
   )
 
 (* case block in Void *)
@@ -2844,9 +2845,9 @@ and _idris_Void_95_elim =
 
 (* {runMain0} *)
 and runMain0 =
-  Lazy.force ((
+  Lazy.force ((Obj.magic ((
     _idris_Main_46_main
-      (raise (Idris_error "LNothing"))
-  ))
+      (Obj.magic ((raise (Idris_error "LNothing"))))
+  ))))
 
 let _ = runMain0

@@ -143,6 +143,7 @@ codegenOCaml ci = writeFile (outputFile ci) (render "(* " " *)" source)
       ocamlPreamble
       $$ cgCtors (M.elems ctors) $$ blankLine
       $$ text "let rec __hello_world__ = \"hello world!\""
+      $$ blankLine
       $$ definitions
       $$ ocamlLauncher
 
@@ -188,21 +189,24 @@ cgDef cs (n, LFun opts name' args body) =
     $$ (indent (cgExp cs [] body))
     $$ blankLine
 
+magic :: Expr -> Expr
+magic e = parens (text "Obj.magic" <+> parens e)
+
 cgExp :: M.Map Name LDecl -> [Name] -> LExp -> Doc
 cgExp cs ns (LV (Glob n)) = cgN cs n
 cgExp cs ns (LV (Loc i)) = cgN cs (ns !! i)
-cgExp cs ns (LApp _ (LV (Glob n)) args) = cgCApp cs n (map (cgExp cs ns) args)
-cgExp cs ns (LApp _ f args) = cgApp (cgExp cs ns f) (map (cgExp cs ns) args)
+cgExp cs ns (LApp _ (LV (Glob n)) args) = cgCApp cs n (map (magic . cgExp cs ns) args)
+cgExp cs ns (LApp _ f args) = cgApp (cgExp cs ns f) (map (magic . cgExp cs ns) args)
 cgExp cs ns (LLazyApp n args) = cgApp (cgN cs n) (map (cgExp cs ns) args)
 cgExp cs ns (LLazyExp e) = text "lazy" <+> parens (cgExp cs ns e)
-cgExp cs ns (LForce e) = text "Lazy.force" <+> parens (cgExp cs ns e)
+cgExp cs ns (LForce e) = text "Lazy.force" <+> parens (magic $ cgExp cs ns e)
 cgExp cs ns (LLet n t e) =
     (text "let" <+> cgName n <+> text "=" <+> cgExp cs ns t <+> text "in")
     $$ indent (cgExp cs ns e)
 cgExp cs ns (LLam lns e) = text "fun" <+> hsep (map cgName lns) <+> text "->" <+> cgExp cs (reverse lns ++ ns) e
-cgExp cs ns (LCon loc tag cn args) = cgCApp cs cn (map (cgExp cs ns) args)
+cgExp cs ns (LCon loc tag cn args) = cgCApp cs cn (map (magic . cgExp cs ns) args)
 cgExp cs ns (LCase _ scrut alts) = parens (
-        (text "match" <+> cgExp cs ns scrut <+> text "with")
+        (text "match" <+> magic (cgExp cs ns scrut) <+> text "with")
         $$ vcat (map (cgAlt cs ns) alts)
     )
 cgExp cs ns (LConst c) = cgConst c
