@@ -117,6 +117,9 @@ ocamlPreamble = vcat . map text $
     , ""
     ]
 
+blankLine :: Doc
+blankLine = text ""
+
 ocamlLauncher :: Doc
 ocamlLauncher =
     text "let" <+> text "_" <+> text "="
@@ -154,6 +157,7 @@ cgDef :: M.Map Name Int -> (Name, LDecl) -> Doc
 cgDef ctors (n, LFun opts name' args body) =
     (text "let" <+> cgName n <+> hsep (map cgName args)  <+> text "=" <?> show n)
         $$ indent (cgExp [] body) <> text ";;"
+        $$ blankLine
 
 cgExp :: [Name] -> LExp -> Doc
 cgExp ns (LV (Glob n)) = cgName n
@@ -185,7 +189,8 @@ cgForeign :: [Name] -> FDesc -> FDesc -> [(FDesc, LExp)] -> Doc
 cgForeign ns n rty args = cgError $ "unsuported foreign call of " ++ show n
 
 cgApp :: Expr -> [Expr] -> Expr
-cgApp f args = parens (f <+> hsep args)
+cgApp f []   = f
+cgApp f args = text "(" $$ indent (f $$ indent (vcat args)) $$ text ")"
 
 cgAlt :: [Name] -> LAlt -> Doc
 cgAlt ns (LConCase _ cn args rhs) =
