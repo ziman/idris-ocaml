@@ -139,12 +139,31 @@ mangle n = "_idris_" ++ concatMap mangleChar (showCG n)
 codegenOCaml :: CodeGenerator
 codegenOCaml ci = writeFile (outputFile ci) (render "(* " " *)" source)
   where
-    source = ocamlPreamble $+$ definitions $+$ ocamlLauncher
+    source =
+      ocamlPreamble
+      $$ cgCtors ctors $$ blankLine
+      $$ definitions
+      $$ ocamlLauncher
 
     -- main file
     decls = liftDecls ci
-    ctors = M.fromList [(n, tag) | (n, LConstructor n' tag arity) <- decls]
-    definitions = vcat $ map (cgDef ctors) [d | d@(_, LFun _ _ _ _) <- decls]
+    ctors = [(n, arity) | (n, LConstructor n' tag arity) <- decls]
+    definitions = vcat $ map cgDef [d | d@(_, LFun _ _ _ _) <- decls]
+
+cgCtors :: [(Name, Int)] -> Doc
+cgCtors cs =
+  text "type value ="
+  $$ indent (
+    vcat (map cgCtor cs)
+    $$ text ";;"
+  )
+
+cgCtor :: (Name, Int) -> Doc
+cgCtor (n, 0) = text "|" <+> text "C" <> cgName n
+cgCtor (n, arity) =
+  text "|" <+> text "C" <> cgName n
+  <+> text "of"
+  <+> hsep (punctuate (text " *") (replicate arity $ text "value"))
 
 -- Let's not mangle /that/ much. Especially function parameters
 -- like e0 and e1 are nicer when readable.
@@ -153,11 +172,12 @@ cgName (MN i n) | all (\x -> isAlpha x || x `elem` "_") (T.unpack n)
     = text $ T.unpack n ++ show i
 cgName n = text (mangle n)  -- <?> show n  -- uncomment this to get a comment for *every* mangled name
 
-cgDef :: M.Map Name Int -> (Name, LDecl) -> Doc
-cgDef ctors (n, LFun opts name' args body) =
-    (text "let" <+> cgName n <+> hsep (map cgName args)  <+> text "=" <?> show n)
-        $$ indent (cgExp [] body) <> text ";;"
-        $$ blankLine
+cgDef :: (Name, LDecl) -> Doc
+cgDef (n, LFun opts name' args body) =
+    (blankLine <?> show n)
+    $$ (text "let" <+> cgName n <+> hsep (map cgName args)  <+> text "=")
+    $$ (indent (cgExp [] body) <> text ";;")
+    $$ blankLine
 
 cgExp :: [Name] -> LExp -> Doc
 cgExp ns (LV (Glob n)) = cgName n
@@ -171,9 +191,10 @@ cgExp ns (LLet n t e) =
     $$ indent (cgExp ns e)
 cgExp ns (LLam lns e) = text "fun" <+> hsep (map cgName lns) <+> text "->" <+> cgExp (reverse lns ++ ns) e
 cgExp ns (LCon loc tag cn args) = cgApp (cgName cn) (map (cgExp ns) args)
-cgExp ns (LCase _ scrut alts) =
-    (text "match" <+> cgExp ns scrut <+> text "with")
-    $$ vcat (map (cgAlt ns) alts)
+cgExp ns (LCase _ scrut alts) = parens (
+        (text "match" <+> cgExp ns scrut <+> text "with")
+        $$ vcat (map (cgAlt ns) alts)
+    )
 cgExp ns (LConst c) = cgConst c
 cgExp ns (LForeign n rty args) = cgForeign ns n rty args
 cgExp ns (LOp f args) = cgOp f (map (cgExp ns) args)
@@ -190,11 +211,18 @@ cgForeign ns n rty args = cgError $ "unsuported foreign call of " ++ show n
 
 cgApp :: Expr -> [Expr] -> Expr
 cgApp f []   = f
+-- cgApp f args = parens (f <+> hsep args)
 cgApp f args = text "(" $$ indent (f $$ indent (vcat args)) $$ text ")"
+
+cgCApp :: Expr -> [Expr] -> Expr
+cgCApp f args = hsep (f : args)
 
 cgAlt :: [Name] -> LAlt -> Doc
 cgAlt ns (LConCase _ cn args rhs) =
-    text "|" <+> cgApp (cgName cn) (map cgName args) <+> text "->"
+    text "|"
+    <+> (text "C" <> cgName cn)
+    <+> parens (hsep (punctuate comma $ map cgName args))
+    <+> text "->"
     $$ indent (cgExp ns rhs)
 cgAlt ns (LConstCase c rhs) =
     text "|" <+> cgConst c <+> text "->"
@@ -204,13 +232,36 @@ cgAlt ns (LDefaultCase rhs) =
     $$ indent (cgExp ns rhs)
 
 cgConst :: Const -> Doc
-cgConst c = cgError $ "unsupported constant: " ++ show c
+cgConst (I i) = text $ show i
+cgConst (BI i) = text $ show i
+cgConst (Fl f) = text $ show f
+cgConst (Ch c) = cgChar c
+cgConst (Str s) = cgStr s
+cgConst c = cgError $ "unimplemented constant: " ++ show c
 
 cgError :: String -> Doc
-cgError msg = text "raise" <+> parens (text "Idris_error" <+> cgStr msg)
+cgError msg = parens (text "raise" <+> parens (text "Idris_error" <+> cgStr msg))
 
 cgStr :: String -> Doc
-cgStr s = text "\"" <> text s <> text "\""
+cgStr s = text "\"" <> text (concatMap (mlShowChr True) s) <> text "\""
+
+cgChar :: Char -> Doc
+cgChar c = text "'" <> text (mlShowChr False c) <> text "'"
+
+mlShowChr :: Bool -> Char -> String
+mlShowChr True  '"' = "\\\""
+mlShowChr False '\'' = "\\'"
+mlShowChr isStr '\\' = "\\\\"
+mlShowChr isStr c
+    | c >= ' ' && c < '\x7F'  = [c]
+    | c <= '\xFF' = "\\x" ++ showHexN 2 (ord c)
+    | otherwise = error $ "char > 255: " ++ show c
+
+showHexN :: Int -> Int -> String
+showHexN 0 _ = ""
+showHexN w n =
+  let (p,q) = n `divMod` 16
+    in showHexN (w-1) p ++ showHex q ""
 
 {-
 cgExport :: ExportIFace -> [Doc]
