@@ -141,16 +141,16 @@ codegenOCaml ci = writeFile (outputFile ci) (render "(* " " *)" source)
   where
     source =
       ocamlPreamble
-      $$ cgCtors ctors $$ blankLine
+      $$ cgCtors (M.elems ctors) $$ blankLine
       $$ definitions
       $$ ocamlLauncher
 
     -- main file
     decls = liftDecls ci
-    ctors = [(n, arity) | (n, LConstructor n' tag arity) <- decls]
-    definitions = vcat $ map cgDef [d | d@(_, LFun _ _ _ _) <- decls]
+    ctors = M.fromList [(n, d) | (n, d@(LConstructor n' tag arity)) <- decls]
+    definitions = vcat $ map (cgDef ctors) [d | d@(_, LFun _ _ _ _) <- decls]
 
-cgCtors :: [(Name, Int)] -> Doc
+cgCtors :: [LDecl] -> Doc
 cgCtors cs =
   text "type value ="
   $$ indent (
@@ -158,9 +158,9 @@ cgCtors cs =
     $$ text ";;"
   )
 
-cgCtor :: (Name, Int) -> Doc
-cgCtor (n, 0) = text "|" <+> text "C" <> cgName n
-cgCtor (n, arity) =
+cgCtor :: LDecl -> Doc
+cgCtor (LConstructor n _tag 0) = text "|" <+> text "C" <> cgName n
+cgCtor (LConstructor n _tag arity) =
   text "|" <+> text "C" <> cgName n
   <+> text "of"
   <+> hsep (punctuate (text " *") (replicate arity $ text "value"))
@@ -172,36 +172,44 @@ cgName (MN i n) | all (\x -> isAlpha x || x `elem` "_") (T.unpack n)
     = text $ T.unpack n ++ show i
 cgName n = text (mangle n)  -- <?> show n  -- uncomment this to get a comment for *every* mangled name
 
-cgDef :: (Name, LDecl) -> Doc
-cgDef (n, LFun opts name' args body) =
+cgN :: M.Map Name LDecl -> Name -> Expr
+cgN cs n
+    | Just (LConstructor n' tag arity) <- M.lookup n cs
+    = text "C" <> cgName n
+
+    | otherwise
+    = cgName n
+
+cgDef :: M.Map Name LDecl -> (Name, LDecl) -> Doc
+cgDef cs (n, LFun opts name' args body) =
     (blankLine <?> show n)
     $$ (text "let" <+> cgName n <+> hsep (map cgName args)  <+> text "=")
-    $$ (indent (cgExp [] body) <> text ";;")
+    $$ (indent (cgExp cs [] body) <> text ";;")
     $$ blankLine
 
-cgExp :: [Name] -> LExp -> Doc
-cgExp ns (LV (Glob n)) = cgName n
-cgExp ns (LV (Loc i)) = cgName (ns !! i)
-cgExp ns (LApp _ f args) = cgApp (cgExp ns f) (map (cgExp ns) args)
-cgExp ns (LLazyApp n args) = cgApp (cgName n) (map (cgExp ns) args)
-cgExp ns (LLazyExp e) = text "lazy" <+> parens (cgExp ns e)
-cgExp ns (LForce e) = text "Lazy.force" <+> parens (cgExp ns e)
-cgExp ns (LLet n t e) =
-    (text "let" <+> cgName n <+> text "=" <+> cgExp ns t <+> text "in")
-    $$ indent (cgExp ns e)
-cgExp ns (LLam lns e) = text "fun" <+> hsep (map cgName lns) <+> text "->" <+> cgExp (reverse lns ++ ns) e
-cgExp ns (LCon loc tag cn args) = cgApp (cgName cn) (map (cgExp ns) args)
-cgExp ns (LCase _ scrut alts) = parens (
-        (text "match" <+> cgExp ns scrut <+> text "with")
-        $$ vcat (map (cgAlt ns) alts)
+cgExp :: M.Map Name LDecl -> [Name] -> LExp -> Doc
+cgExp cs ns (LV (Glob n)) = cgN cs n
+cgExp cs ns (LV (Loc i)) = cgN cs (ns !! i)
+cgExp cs ns (LApp _ f args) = cgApp (cgExp cs ns f) (map (cgExp cs ns) args)
+cgExp cs ns (LLazyApp n args) = cgApp (cgN cs n) (map (cgExp cs ns) args)
+cgExp cs ns (LLazyExp e) = text "lazy" <+> parens (cgExp cs ns e)
+cgExp cs ns (LForce e) = text "Lazy.force" <+> parens (cgExp cs ns e)
+cgExp cs ns (LLet n t e) =
+    (text "let" <+> cgName n <+> text "=" <+> cgExp cs ns t <+> text "in")
+    $$ indent (cgExp cs ns e)
+cgExp cs ns (LLam lns e) = text "fun" <+> hsep (map cgName lns) <+> text "->" <+> cgExp cs (reverse lns ++ ns) e
+cgExp cs ns (LCon loc tag cn args) = cgApp (cgN cs cn) (map (cgExp cs ns) args)
+cgExp cs ns (LCase _ scrut alts) = parens (
+        (text "match" <+> cgExp cs ns scrut <+> text "with")
+        $$ vcat (map (cgAlt cs ns) alts)
     )
-cgExp ns (LConst c) = cgConst c
-cgExp ns (LForeign n rty args) = cgForeign ns n rty args
-cgExp ns (LOp f args) = cgOp f (map (cgExp ns) args)
-cgExp ns LNothing = cgError "LNothing"
-cgExp ns (LError msg) = cgError msg
+cgExp cs ns (LConst c) = cgConst c
+cgExp cs ns (LForeign n rty args) = cgForeign ns n rty args
+cgExp cs ns (LOp f args) = cgOp f (map (cgExp cs ns) args)
+cgExp cs ns LNothing = cgError "LNothing"
+cgExp cs ns (LError msg) = cgError msg
 
-cgExp ns e = cgError $ "unsupported expr: " ++ show e
+cgExp cs ns e = cgError $ "unsupported expr: " ++ show e
 
 cgOp :: PrimFn -> [Expr] -> Doc
 cgOp op args = cgError $ "unsupported op: " ++ show op
@@ -217,19 +225,22 @@ cgApp f args = text "(" $$ indent (f $$ indent (vcat args)) $$ text ")"
 cgCApp :: Expr -> [Expr] -> Expr
 cgCApp f args = hsep (f : args)
 
-cgAlt :: [Name] -> LAlt -> Doc
-cgAlt ns (LConCase _ cn args rhs) =
+cgAlt :: M.Map Name LDecl -> [Name] -> LAlt -> Doc
+cgAlt cs ns (LConCase _ cn [] rhs) =
+    text "|" <+> cgN cs cn <+> text "->"
+    $$ indent (cgExp cs ns rhs)
+cgAlt cs ns (LConCase _ cn args rhs) =
     text "|"
-    <+> (text "C" <> cgName cn)
+    <+> cgN cs cn
     <+> parens (hsep (punctuate comma $ map cgName args))
     <+> text "->"
-    $$ indent (cgExp ns rhs)
-cgAlt ns (LConstCase c rhs) =
+    $$ indent (cgExp cs ns rhs)
+cgAlt cs ns (LConstCase c rhs) =
     text "|" <+> cgConst c <+> text "->"
-    $$ indent (cgExp ns rhs)
-cgAlt ns (LDefaultCase rhs) =
+    $$ indent (cgExp cs ns rhs)
+cgAlt cs ns (LDefaultCase rhs) =
     text "|" <+> text "_" <+> text "->"
-    $$ indent (cgExp ns rhs)
+    $$ indent (cgExp cs ns rhs)
 
 cgConst :: Const -> Doc
 cgConst (I i) = text $ show i
