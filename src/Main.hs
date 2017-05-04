@@ -1,12 +1,14 @@
 module Main where
 
-import Idris.Core.TT
 import Idris.AbsSyntax
+import Idris.Core.TT
 import Idris.ElabDecls
+import Idris.Main
+import Idris.ModeCommon
 import Idris.REPL
 
-import IRTS.Compiler
 import IRTS.CodegenOCaml
+import IRTS.Compiler
 
 import System.Environment
 import System.Exit
@@ -32,13 +34,11 @@ c_main :: Opts -> Idris ()
 c_main opts = do elabPrims
                  loadInputs (inputs opts) Nothing
                  mainProg <- elabMain
-                 ir <- compile (Via "ocaml") (output opts) (Just mainProg)
+                 ir <- compile (Via IBCFormat "ocaml") (output opts) (Just mainProg)
                  runIO $ codegenOCaml ir
 
 main :: IO ()
 main = do opts <- getOpts
-          if (null (inputs opts)) 
+          if (null (inputs opts))
              then showUsage
              else runMain (c_main opts)
-
-
